@@ -1,0 +1,775 @@
+{
+  "metadata": {
+    "name": "Ed deHaan",
+    "email": "edehaan@stanford.edu",
+    "phone": ""
+  },
+  "publications": [
+    {
+      "year": 2025,
+      "type": "journal",
+      "status": "in_progress",
+      "institution": "Journal of Accounting and Economics",
+      "title": "Social Media Livestreaming: Investor Information or Persuasion?",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "book",
+      "status": "published",
+      "institution": "Handbook on the Financial Reporting Environment",
+      "title": "Information Processing Costs",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "journal",
+      "status": "in_progress",
+      "institution": "",
+      "title": "Generative AI in Financial Reporting",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "journal",
+      "status": "in_progress",
+      "institution": "",
+      "title": "The Shadow Value of \u2018Public\u2019 Information",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "journal",
+      "status": "published",
+      "institution": "The Accounting Review",
+      "title": "Local-Thinking Bias",
+      "role": "co_author"
+    },
+    {
+      "year": 2013,
+      "type": "journal",
+      "status": "published",
+      "institution": "Contemporary Accounting Research",
+      "title": "Does Voluntary Adoption of a Clawback Provision Improve Financial Reporting Quality?",
+      "role": "co_author"
+    },
+    {
+      "year": 2014,
+      "type": "journal",
+      "status": "published",
+      "institution": "Accounting Review",
+      "title": "Reputation Repair after a Serious Restatement",
+      "role": "co_author"
+    },
+    {
+      "year": 2015,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting and Economics",
+      "title": "Market (In)Attention and the Strategic Scheduling and Timing of Earnings Announcements",
+      "role": "co_author"
+    },
+    {
+      "year": 2015,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting and Economics",
+      "title": "Does the Revolving Door Affect the SEC\u2019s Enforcement Outcomes?",
+      "role": "co_author"
+    },
+    {
+      "year": 2017,
+      "type": "journal",
+      "status": "published",
+      "institution": "Accounting Review",
+      "title": "The Financial Crisis and Corporate Credit Ratings.",
+      "role": "sole_author"
+    },
+    {
+      "year": 2017,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting Research",
+      "title": "Do Weather-Induced Moods Affect the Processing of Earnings News?",
+      "role": "co_author"
+    },
+    {
+      "year": 2018,
+      "type": "journal",
+      "status": "published",
+      "institution": "Review of Accounting Studies",
+      "title": "Capital Market Effects of Media Synthesis and Dissemination: Evidence from Robo-Journalism",
+      "role": "co_author"
+    },
+    {
+      "year": 2019,
+      "type": "journal",
+      "status": "published",
+      "institution": "Review of Accounting Studies",
+      "title": "Long-Term Economic Consequences of Hedge Fund Activist Interventions.",
+      "role": "co_author"
+    },
+    {
+      "year": 2019,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting Research",
+      "title": "Why do individual investors disregard accounting information? The roles of information awareness and acquisition costs.",
+      "role": "co_author"
+    },
+    {
+      "year": 2020,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Financial Reporting",
+      "title": "Strategic Disclosure and CEO Media Visibility.",
+      "role": "co_author"
+    },
+    {
+      "year": 2020,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting and Economics",
+      "title": "Disclosure Processing Costs, Investors\u2019 Information Choice, and Equity Market Outcomes: A Review.",
+      "role": "co_author"
+    },
+    {
+      "year": 2021,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting and Economics",
+      "title": "Obfuscation in Mutual Funds.",
+      "role": "co_author"
+    },
+    {
+      "year": 2023,
+      "type": "journal",
+      "status": "published",
+      "institution": "Management Science",
+      "title": "How Resilient are Firms\u2019 Financial Reporting Processes?",
+      "role": "co_author"
+    },
+    {
+      "year": 2023,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting Research",
+      "title": "Financial Reporting and Employee Job Search.",
+      "role": "co_author"
+    },
+    {
+      "year": 2023,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting and Economics",
+      "title": "Retail Bond Investors and Credit Ratings.",
+      "role": "co_author"
+    },
+    {
+      "year": 2023,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Financial Reporting",
+      "title": "Control Variables in Interactive Models.",
+      "role": "co_author"
+    },
+    {
+      "year": 2024,
+      "type": "journal",
+      "status": "published",
+      "institution": "Management Science",
+      "title": "Buy Now Pay (Pain?) Later.",
+      "role": "co_author"
+    },
+    {
+      "year": 2024,
+      "type": "journal",
+      "status": "published",
+      "institution": "Management Science",
+      "title": "Measuring Investor Attention using Google Search.",
+      "role": "co_author"
+    },
+    {
+      "year": 2024,
+      "type": "journal",
+      "status": "published",
+      "institution": "Journal of Accounting Research",
+      "title": "Using and Interpreting Fixed Effects Models.",
+      "role": "co_author"
+    },
+    {
+      "year": 2024,
+      "type": "journal",
+      "status": "published",
+      "institution": "Accounting Review",
+      "title": "Market Access and Retail Trading Performance.",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "other",
+      "status": "in_progress",
+      "institution": "",
+      "title": "Accounting Information and Trade Credit.",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "other",
+      "status": "in_progress",
+      "institution": "",
+      "title": "Generative AI in Financial Reporting.",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "book",
+      "status": "published",
+      "institution": "Edward Elgar Publishing",
+      "title": "Information Processing Costs.",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "other",
+      "status": "published",
+      "institution": "SEC",
+      "title": "Comment Letter to the SEC on proposed 24X National Exchange (File No. 10-2421).",
+      "role": "co_author"
+    },
+    {
+      "year": 2025,
+      "type": "other",
+      "status": "published",
+      "institution": "SEC",
+      "title": "Comment Letter to the SEC on proposed amendments to mutual fund disclosures (File No. S7-09-20).",
+      "role": "co_author"
+    }
+  ],
+  "presentations": [
+    {
+      "title": "15 workshop & conference presentations; 4 keynote presentations; 4 panel discussions",
+      "year": 2025,
+      "type": "other",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Singapore Management; National Univ. Singapore; NTU",
+      "year": 2026,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Colorado Conference; Berkeley; Utah State; Alberta Conference; Hawaii; FARS Conference; Iowa; Bridging Humans and AI Conference; German Joint Finance Seminar; Capital Group; SG Advisors; SoFi",
+      "year": 2025,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "LBS; Wisconsin; Columbia; Tulane Conference; UIC; UC Riverside; SIEPR Financial Literacy Colloquium; JAR Registered Reports Conference; AI Flash Talks",
+      "year": 2024,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Boston College; Harvard; Arizona; Florida International; U Hong Kong; Colorado; UCSD; FARS; Houston; Michigan Conference; Notre Dame Conference; BAR",
+      "year": 2023,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "MIT; Chicago; Stanford; Yale; Penn State; Concordia; George Washington; Miami; UW; La Trobe; UNSW; Hong Kong Polytechnic; BAR",
+      "year": 2022,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Pennsylvania; USC; UNC; Southern Methodist; LSE; Florida State; UT Dallas; Kentucky; Delaware; Michigan State; CUHK; Georgia State; Lehigh/Villanova",
+      "year": 2021,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Carnegie Mellon; NYU; Yale; Early Insights in Accounting Webinar; UW; Missouri; Utah",
+      "year": 2020,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "JAE Conference; Miami Winter Warm-Up; Northwestern; Texas; Georgia Tech; Iowa; Texas A&M; Arizona State",
+      "year": 2019,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "FARS Plenary Session; UCLA Conference; Duke; Toronto; Washington University; Florida; Baruch; Swiss Finance Institute.",
+      "year": 2018,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Harvard; Indiana; INSEAD; Penn State Conference; Tilburg Camp; Rotterdam; Erasmus; Southern Methodist; Virginia Darden.",
+      "year": 2017,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "HKUST Symposium; Washington; Rutgers; UBCOW Conference.",
+      "year": 2016,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Chicago; Pennsylvania; Michigan; Berkeley; LBS; Utah; Stanford Camp; LBS Symposium; Illinois Young Scholars Symposium; Georgia; FARS Meeting.",
+      "year": 2015,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "JAE Conference; Conference on Financial Economics and Accounting; Minnesota; San Francisco State; Ohio State; UNC; Rochester; University of Technology, Sydney.",
+      "year": 2014,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "NYU; Rice; Berkeley; Miami; Arizona State; Stanford; Boston College; MIT; Northwestern; Columbia; Emory; Washington University.",
+      "year": 2013,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Conference on Financial Economics and Accounting; UBCOW Conference; AAA Conference; Milgard CSLR Conference; AAA Western Regional; Washington; FARS.",
+      "year": 2012,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": ""
+    },
+    {
+      "title": "Panel: FARS Conference",
+      "year": 2026,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "FARS Conference"
+    },
+    {
+      "title": "Panel: Summit@StanfordGSB, Stanford",
+      "year": 2025,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Summit@StanfordGSB, Stanford"
+    },
+    {
+      "title": "Panel: West Coast Leadership Dialogue, Stanford",
+      "year": 2025,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "West Coast Leadership Dialogue, Stanford"
+    },
+    {
+      "title": "Panel: Centennial Celebration, Stanford",
+      "year": 2025,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Centennial Celebration, Stanford"
+    },
+    {
+      "title": "Keynote: Sullivan Scholar Forum, Iowa",
+      "year": 2025,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "Sullivan Scholar Forum, Iowa"
+    },
+    {
+      "title": "Keynote: Deloitte Doctoral Consortium, Texas",
+      "year": 2025,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Keynote: CAPANA Annual Conference, Taiwan",
+      "year": 2025,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "CAPANA Annual Conference, Taiwan"
+    },
+    {
+      "title": "Panel: Labor & Accounting Group Conference, Stanford",
+      "year": 2025,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Labor & Accounting Group Conference, Stanford"
+    },
+    {
+      "title": "Keynote: SARAC Conference, Davos, Switzerland",
+      "year": 2025,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "SARAC Conference, Davos, Switzerland"
+    },
+    {
+      "title": "Panel: JAE Doctoral Consortium, Stanford",
+      "year": 2024,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "JAE Doctoral Consortium, Stanford"
+    },
+    {
+      "title": "Keynote: CUHK Accounting Conference, Hong Kong",
+      "year": 2024,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "CUHK Accounting Conference, Hong Kong"
+    },
+    {
+      "title": "Keynote: Disclosure, Information Sharing, and Secrecy Workshop",
+      "year": 2023,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "Disclosure, Information Sharing, and Secrecy Workshop"
+    },
+    {
+      "title": "Discussion: FARS Conference \u2013 \u201cConflicted regulators\u201d",
+      "year": 2023,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "FARS Conference"
+    },
+    {
+      "title": "Discussion: Brazil Conference \u2013 \u201cThe SEC\u2019s use of voluntary disclosure for the oversight of mandatory disclosure\u201d",
+      "year": 2022,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Brazil Conference"
+    },
+    {
+      "title": "Keynote: Deloitte Doctoral Consortium, Texas",
+      "year": 2022,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Panel: Deloitte Doctoral Consortium, Texas",
+      "year": 2022,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Panel: Deloitte Doctoral Consortium, Texas",
+      "year": 2021,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Panel: Deloitte Doctoral Consortium, Texas",
+      "year": 2020,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Panel: Deloitte Doctoral Consortium, Texas",
+      "year": 2019,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Keynote: Deloitte Doctoral Consortium, Texas",
+      "year": 2019,
+      "type": "keynote",
+      "role": "sole_presenter",
+      "institution": "Deloitte Doctoral Consortium, Texas"
+    },
+    {
+      "title": "Panel: CARE Conference, Washington DC",
+      "year": 2019,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "CARE Conference, Washington DC"
+    },
+    {
+      "title": "Discussion: UNC/Duke Fall Camp \u2013 \u201cFinancial reporting quality, turnover risk, and wage differentials: evidence from worker-level data\u201d",
+      "year": 2019,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "UNC/Duke Fall Camp"
+    },
+    {
+      "title": "Discussion: RAST Conference \u2013 \u201cAutomatic summaries of earnings releases: attributes and effects on investors\u2019 judgments.\u201d",
+      "year": 2018,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "RAST Conference"
+    },
+    {
+      "title": "Discussion: Colorado Conference \u2013 \u201cStrategic subsidiary disclosure.\u201d",
+      "year": 2018,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Colorado Conference"
+    },
+    {
+      "title": "Discussion: Stanford Summer Camp \u2013 \u201cLooking under the hood: quantitative vs qualitative inputs to analysts\u2019 forecasts of fundamental risk.\u201d",
+      "year": 2018,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": "Stanford Summer Camp"
+    },
+    {
+      "title": "Discussion: AAA Annual Meeting - \u201cCustomers and financial reporting quality.\u201d",
+      "year": 2017,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "AAA Annual Meeting"
+    },
+    {
+      "title": "Discussion: AAA Annual Meeting - \u201cWeather and voluntary management forecasts.\u201d",
+      "year": 2017,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "AAA Annual Meeting"
+    },
+    {
+      "title": "Discussion: Wash U Dopuch Conference - \u201cWhen does peer information matter?\u201d",
+      "year": 2016,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "Wash U Dopuch Conference"
+    },
+    {
+      "title": "Discussion: FARS Conference - \u201cThe hidden face of the media: how financial journalists produce information.\u201d",
+      "year": 2015,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "FARS Conference"
+    },
+    {
+      "title": "Discussion: FARS Conference - \u201cCash flow management and credit rating properties.\u201d",
+      "year": 2014,
+      "type": "conference",
+      "role": "sole_presenter",
+      "institution": "FARS Conference"
+    },
+    {
+      "title": "Discussion: Stanford Summer Camp - \u201cInherited identity and CEO compensation.\u201d",
+      "year": 2014,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": "Stanford Summer Camp"
+    },
+    {
+      "title": "Disclosure Processing Costs",
+      "year": 2025,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": "U Iowa"
+    },
+    {
+      "title": "Disclosure Processing Costs; Research Methods",
+      "year": 2022,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": "Northwestern"
+    },
+    {
+      "title": "Research Methods",
+      "year": 2021,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": "U Tennessee"
+    },
+    {
+      "title": "Market Inattention; Research Methods",
+      "year": 2018,
+      "type": "workshop",
+      "role": "sole_presenter",
+      "institution": "INSEAD"
+    }
+  ],
+  "recognitions": [
+    {
+      "year": 2025,
+      "title": "Received Chair, Class of 1968 Professor of Management",
+      "institution": "Stanford Graduate School of Business"
+    },
+    {
+      "year": 2012,
+      "title": "Best Paper Award \u2013 Western AAA Meeting",
+      "institution": "Western AAA Meeting"
+    },
+    {
+      "year": 2014,
+      "title": "Selected for the 2014 Journal of Accounting and Economics Conference",
+      "institution": "Journal of Accounting and Economics Conference"
+    },
+    {
+      "year": 2012,
+      "title": "Best PhD Paper Award \u2013 Western AAA Meeting",
+      "institution": "Western AAA Meeting"
+    },
+    {
+      "year": 2021,
+      "title": "Best Paper Awards: FARS Section of AAA",
+      "institution": "FARS Section of AAA"
+    },
+    {
+      "year": 2017,
+      "title": "Best Paper Awards: FARS Mid-Year Meeting",
+      "institution": "FARS Mid-Year Meeting"
+    },
+    {
+      "year": 2018,
+      "title": "Selected for the 2018 FARS \u201cEditors\u2019 Picks\u201d Plenary Session",
+      "institution": "FARS"
+    },
+    {
+      "year": 2019,
+      "title": "Selected for the 2019 Journal of Accounting and Economics Conference",
+      "institution": "Journal of Accounting and Economics Conference"
+    },
+    {
+      "year": 2020,
+      "title": "Selected for the 2020 Journal of Accounting and Economics Conference",
+      "institution": "Journal of Accounting and Economics Conference"
+    },
+    {
+      "year": 2025,
+      "title": "Selected for the 2025 Journal of Accounting Research Conference",
+      "institution": "Journal of Accounting Research Conference"
+    },
+    {
+      "year": 2024,
+      "title": "Selected for the 2024 JAR Registered Reports Conference",
+      "institution": "JAR Registered Reports Conference"
+    },
+    {
+      "year": 2024,
+      "title": "Selected for the 2024 Colorado Summer Conference",
+      "institution": "Colorado Summer Conference"
+    },
+    {
+      "year": 2025,
+      "title": "Selected for the 2025 Colorado Summer Conference",
+      "institution": "Colorado Summer Conference"
+    },
+    {
+      "year": 2018,
+      "title": "Best discussant award winner",
+      "institution": "RAST Conference"
+    },
+    {
+      "year": 2024,
+      "title": "Distinguished Teaching Award",
+      "institution": "Stanford"
+    },
+    {
+      "year": 2022,
+      "title": "Evening MBA Professor of the Year",
+      "institution": "UW"
+    },
+    {
+      "year": 2023,
+      "title": "Evening MBA Professor of the Year",
+      "institution": "UW"
+    },
+    {
+      "year": 2018,
+      "title": "MBA Professor of the Year",
+      "institution": "UW"
+    },
+    {
+      "year": 2021,
+      "title": "MBA Professor of the Year",
+      "institution": "UW"
+    },
+    {
+      "year": 2021,
+      "title": "Outstanding PhD Mentor Award",
+      "institution": "UW"
+    },
+    {
+      "year": 2018,
+      "title": "PACCAR Teaching Excellence Award",
+      "institution": "UW"
+    },
+    {
+      "year": 2018,
+      "title": "Charles Summer Memorial Teaching Award",
+      "institution": "UW"
+    },
+    {
+      "year": 2014,
+      "title": "MSx Teaching Excellence Award",
+      "institution": "Stanford"
+    },
+    {
+      "year": 2016,
+      "title": "MSx Teaching Excellence Award",
+      "institution": "Stanford"
+    },
+    {
+      "year": 2011,
+      "title": "PhD Teaching Award",
+      "institution": "UW"
+    },
+    {
+      "year": 2022,
+      "title": "Daniel R. Siegel Service Award",
+      "institution": "UW"
+    },
+    {
+      "year": 2017,
+      "title": "Fowler Award for Special Achievement",
+      "institution": "UW"
+    },
+    {
+      "year": 2022,
+      "title": "Fowler Award for Special Achievement",
+      "institution": "UW"
+    },
+    {
+      "year": 2020,
+      "title": "Dean\u2019s Award for Faculty Research",
+      "institution": "UW"
+    },
+    {
+      "year": 2022,
+      "title": "SEC Rule 33-11125, 2022. \u201cTailored Shareholder Reports for Mutual Funds and Exchange-Traded Funds; Fee Information in Investment Company Advertisements.\u201d",
+      "institution": "SEC"
+    },
+    {
+      "year": 2022,
+      "title": "Statement by SEC Commissioner Crenshaw, 2022. \u201cStatement on Tailored Shareholder Reports for Mutual Funds and Exchange Traded Funds.\u201d",
+      "institution": "SEC"
+    },
+    {
+      "year": 2022,
+      "title": "SEC Rule 33-11126, 2022. \u201cListing Standards for Recovery of Erroneously Awarded Compensation.\u201d",
+      "institution": "SEC"
+    },
+    {
+      "year": 2021,
+      "title": "Statement by SEC Commissioner Crenshaw, 2021. \u201cThe Lessons of Structured Data.\u201d",
+      "institution": "SEC"
+    }
+  ]
+}
