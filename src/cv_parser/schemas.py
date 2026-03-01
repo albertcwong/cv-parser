@@ -82,9 +82,9 @@ class Recognition(BaseModel):
 
 
 class ProfessorMetadata(BaseModel):
-    name: str = ""
-    email: str = ""
-    phone: str = ""
+    """Source file identifier. No longer parses name, email, phone."""
+
+    filename: str = ""
 
 
 class CVParseResult(BaseModel):
@@ -101,6 +101,7 @@ class RawItem(BaseModel):
     year: int | None = None
     institution: str = ""
     snippet: str = ""
+    authors: str = ""  # author string as listed (e.g. "Smith, J." or "Smith, J., Jones, A.")
 
 
 class RawExtraction(BaseModel):
@@ -109,3 +110,4 @@ class RawExtraction(BaseModel):
     raw_publications: list[RawItem] = Field(default_factory=list)
     raw_presentations: list[RawItem] = Field(default_factory=list)
     raw_recognitions: list[RawItem] = Field(default_factory=list)
+    raw_other: list[RawItem] = Field(default_factory=list)  # items that don't fit any category

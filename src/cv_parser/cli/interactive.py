@@ -5,9 +5,9 @@ from pathlib import Path
 from cv_parser.cli.display import format_result, format_usage
 from cv_parser.cli.file_browser import browse_and_select
 from cv_parser.combiner import combine_to_flat, load_from_json
-from cv_parser.config import get_max_retries, get_retry_on_validation_error, get_threads, get_two_pass, load_config, resolve, save_config
+from cv_parser.config import get_max_retries, get_retry_on_validation_error, get_temp_dir, get_threads, get_two_pass, get_use_extracted_text, load_config, resolve, save_config
 from cv_parser.export import export_csv, export_json
-from cv_parser.parser import parse_cv, parse_cvs, parse_two_pass
+from cv_parser.line_parser import parse_cv_from_lines
 from cv_parser.providers import get_provider
 from cv_parser.schemas import CVParseResult, Usage
 
@@ -25,12 +25,14 @@ def run_menu(
     api_key: str | None = None,
     retry_on_validation_error: bool | None = None,
     two_pass: bool | None = None,
+    use_extracted_text: bool | None = None,
 ) -> None:
     """Show top-level menu and dispatch to parse, export, or settings. Loops until Quit."""
     while True:
-        prov, mod, key = resolve(provider=provider, model=model, api_key=api_key)
+        prov, mod, key, mod_ext, mod_cls = resolve(provider=provider, model=model, api_key=api_key)
         retry = retry_on_validation_error if retry_on_validation_error is not None else get_retry_on_validation_error()
         two = two_pass if two_pass is not None else get_two_pass()
+        use_ext = use_extracted_text if use_extracted_text is not None else get_use_extracted_text()
         max_ret = get_max_retries()
         try:
             import questionary
@@ -69,15 +71,18 @@ def run_menu(
             run_export_interactive()
             continue
         if "Parse many CVs" in choice:
-            run_async_parse(prov, mod, key, retry, two, max_ret)
+            run_async_parse(prov, mod, key, retry, two, max_ret, use_ext, mod_ext, mod_cls)
             continue
         run_interactive(
             provider=prov,
             model=mod,
             api_key=key,
+            model_extraction=mod_ext,
+            model_classification=mod_cls,
             retry_on_validation_error=retry,
             two_pass=two,
             max_retries=max_ret,
+            use_extracted_text=use_ext,
         )
 
 
@@ -88,6 +93,9 @@ def run_async_parse(
     retry_on_validation_error: bool,
     two_pass: bool,
     max_retries: int = 1,
+    use_extracted_text: bool = False,
+    model_extraction: str | None = None,
+    model_classification: str | None = None,
 ) -> None:
     """Queue files for async parsing. Two-pass default."""
     paths = browse_and_select(
@@ -100,9 +108,9 @@ def run_async_parse(
 
     try:
         import questionary
-        out_dir = questionary.path("Output directory:", default=str(Path.cwd())).ask()
+        out_dir = questionary.path("Output directory:", default="output").ask()
     except ImportError:
-        out_dir = input(f"Output directory [{Path.cwd()}]: ").strip() or str(Path.cwd())
+        out_dir = input("Output directory [output]: ").strip() or "output"
     out_dir = Path(out_dir).expanduser().resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -133,6 +141,10 @@ def run_async_parse(
         two_pass=two_pass,
         layout=layout or "Individual",
         format=fmt or "JSON",
+        temp_dir=get_temp_dir(),
+        use_extracted_text=use_extracted_text,
+        model_extraction=model_extraction,
+        model_classification=model_classification,
     )
     jobs = q.enqueue(paths)
     print(f"Queued {len(jobs)} file(s). Use Job status to monitor.")
@@ -154,29 +166,42 @@ def run_job_status_menu(
     from cv_parser.jobs import get_queue
 
     def _render() -> str:
+        from cv_parser.jobs import JobStatus, _format_dt, _format_runtime
+
         q = get_queue()
-        queued = q.get_queued()
-        in_progress = q.get_in_progress()
-        done = q.get_done()
-        failed = q.get_failed()
-        lines = []
-        if queued:
-            lines.append("Queued:")
-            for j in queued:
-                lines.append(f"  • {j.name} ({j.bytes:,} bytes)")
-        if in_progress:
-            lines.append("In progress:")
-            for j in in_progress:
-                pct = int(j.progress)
-                phase = f" ({j.phase})" if j.phase else ""
-                lines.append(f"  • {j.name} {pct}%{phase}")
-        if done:
-            lines.append(f"Done: {len(done)} file(s)")
-        if failed:
-            lines.append("Failed:")
-            for j in failed:
-                lines.append(f"  • {j.name}: {j.error}")
-        return "\n".join(lines) if lines else "No jobs."
+        all_jobs = q.get_all()
+        if not all_jobs:
+            return "No jobs."
+
+        def _phase(j) -> str:
+            if j.status == JobStatus.QUEUED:
+                return "queued"
+            if j.status == JobStatus.IN_PROGRESS:
+                return f"{j.phase or 'processing'} {int(j.progress)}%" if j.phase else f"{int(j.progress)}%"
+            if j.status == JobStatus.DONE:
+                return "done"
+            err = (j.error or "")[:30]
+            return f"failed: {err}..." if j.error and len(j.error) > 30 else f"failed: {err}" if err else "failed"
+
+        def _start(j) -> str:
+            return _format_dt(j.start_time) if j.start_time else ""
+
+        def _runtime(j) -> str:
+            return _format_runtime(sec) if (sec := j.runtime_seconds) is not None else ""
+
+        rows = [(j.name, _phase(j), _start(j), _runtime(j)) for j in all_jobs]
+        w_name = max(len("filename"), max(len(r[0]) for r in rows), 20)
+        w_phase = max(len("phase"), max(len(r[1]) for r in rows), 12)
+        w_start = max(len("start time"), max(len(r[2]) for r in rows), 19)
+        w_runtime = max(len("runtime"), max(len(r[3]) for r in rows), 8)
+
+        sep = "  "
+        header = f"{'filename':<{w_name}}{sep}{'phase':<{w_phase}}{sep}{'start time':<{w_start}}{sep}{'runtime':<{w_runtime}}"
+        div = "-" * len(header)
+        lines = [header, div]
+        for name, phase, start, runtime in rows:
+            lines.append(f"{name:<{w_name}}{sep}{phase:<{w_phase}}{sep}{start:<{w_start}}{sep}{runtime:<{w_runtime}}")
+        return "\n".join(lines)
 
     interval = 2
     while True:
@@ -265,11 +290,14 @@ def run_settings_menu() -> None:
         cfg = load_config()
         prov = cfg.get("provider") or "openai"
         mod = cfg.get("model") or ""
+        mod_ext = cfg.get("model_extraction") or ""
+        mod_cls = cfg.get("model_classification") or ""
         key = cfg.get("api_key") or ""
         threads = get_threads()
         two = get_two_pass()
         retry = get_retry_on_validation_error()
         max_ret = get_max_retries()
+        use_ext = get_use_extracted_text()
 
         try:
             import questionary
@@ -278,24 +306,28 @@ def run_settings_menu() -> None:
                 choices=[
                     f"Provider: {prov}",
                     f"Model: {mod or '(default)'}",
+                    f"Model extraction: {mod_ext or '(default)'}",
+                    f"Model classification: {mod_cls or '(default)'}",
                     f"API key: {'***' if key else '(not set)'}",
                     f"Parse threads: {threads}",
                     f"Two-pass extraction: {'on' if two else 'off'}",
+                    f"Use extracted text (not original file): {'on' if use_ext else 'off'}",
                     f"Retry on validation error: {'on' if retry else 'off'}",
                     f"Max retries: {max_ret}",
                     "Back",
                 ],
             ).ask()
         except ImportError:
-            print("1. Provider  2. Model  3. API key  4. Threads  5. Two-pass  6. Retry  7. Max retries  8. Back")
+            print("1. Provider  2. Model  3. API key  4. Threads  5. Two-pass  6. Use extracted text  7. Retry  8. Max retries  9. Back")
             c = input("Choice: ").strip()
             choice = (
                 f"Provider: {prov}" if c == "1" else f"Model: {mod or '(default)'}" if c == "2"
                 else f"API key: {'***' if key else '(not set)'}" if c == "3"
                 else f"Parse threads: {threads}" if c == "4"
                 else f"Two-pass extraction: {'on' if two else 'off'}" if c == "5"
-                else f"Retry on validation error: {'on' if retry else 'off'}" if c == "6"
-                else f"Max retries: {max_ret}" if c == "7"
+                else f"Use extracted text (not original file): {'on' if use_ext else 'off'}" if c == "6"
+                else f"Retry on validation error: {'on' if retry else 'off'}" if c == "7"
+                else f"Max retries: {max_ret}" if c == "8"
                 else "Back"
             )
 
@@ -311,7 +343,7 @@ def run_settings_menu() -> None:
             if new:
                 save_config(provider=new)
                 print(f"Saved provider: {new}")
-        elif "Model" in choice:
+        elif choice == "Model: " + (mod or "(default)"):
             try:
                 import questionary
                 new = questionary.text("Model (blank = provider default):", default=mod).ask() or ""
@@ -319,6 +351,22 @@ def run_settings_menu() -> None:
                 new = input(f"Model [{mod}]: ").strip()
             save_config(model=new or None)
             print(f"Saved model: {new or '(default)'}")
+        elif "Model extraction" in choice:
+            try:
+                import questionary
+                new = questionary.text("Model (blank = use default):", default=mod_ext).ask() or ""
+            except ImportError:
+                new = input(f"Model extraction [{mod_ext}]: ").strip()
+            save_config(model_extraction=new or None)
+            print(f"Saved model extraction: {new or '(default)'}")
+        elif "Model classification" in choice:
+            try:
+                import questionary
+                new = questionary.text("Model (blank = use default):", default=mod_cls).ask() or ""
+            except ImportError:
+                new = input(f"Model classification [{mod_cls}]: ").strip()
+            save_config(model_classification=new or None)
+            print(f"Saved model classification: {new or '(default)'}")
         elif "API key" in choice:
             try:
                 import questionary
@@ -343,6 +391,9 @@ def run_settings_menu() -> None:
         elif "Two-pass" in choice:
             save_config(two_pass=not two)
             print(f"Saved two-pass: {'on' if not two else 'off'}")
+        elif "Use extracted text" in choice:
+            save_config(use_extracted_text=not use_ext)
+            print(f"Saved use extracted text: {'on' if not use_ext else 'off'}")
         elif "Retry" in choice and "Max" not in choice:
             save_config(retry_on_validation_error=not retry)
             print(f"Saved retry on validation error: {'on' if not retry else 'off'}")
@@ -364,11 +415,14 @@ def run_interactive(
     provider: str | None = None,
     model: str | None = None,
     api_key: str | None = None,
+    model_extraction: str | None = None,
+    model_classification: str | None = None,
     retry_on_validation_error: bool = True,
     two_pass: bool = False,
     max_retries: int | None = None,
+    use_extracted_text: bool = False,
 ) -> None:
-    """Run interactive verify loop (single file) or batch parse (multiple files)."""
+    """Run interactive parse (single file) or batch parse (multiple files)."""
     paths = browse_and_select(
         Path.cwd(),
         extensions=(".pdf", ".docx", ".doc"),
@@ -377,82 +431,24 @@ def run_interactive(
     if not paths:
         return
 
-    max_ret = max_retries if max_retries is not None else get_max_retries()
     if len(paths) > 1:
-        _run_batch_parse(paths, provider, model, api_key, retry_on_validation_error, two_pass, max_ret)
+        _run_batch_parse(paths, provider, model, api_key, retry_on_validation_error, two_pass, max_retries or 1, use_extracted_text, model_extraction, model_classification)
         return
 
     path = paths[0]
-    print(f"Loading {path.name}...", flush=True)
-    document = path.read_bytes()
-    print(f"Read {len(document):,} bytes. Parsing...", flush=True)
-    suffix = path.suffix.lower()
-    mime = MIME.get(suffix, "application/pdf")
-    prov = get_provider(provider=provider, model=model, api_key=api_key)
-
-    result: CVParseResult | None = None
-    last_usage: Usage | None = None
-    while True:
-        try:
-            if result is None:
-                if two_pass:
-                    result, last_usage = _parse_two_pass_with_display(
-                        prov,
-                        document,
-                        mime,
-                        retry_on_validation_error=retry_on_validation_error,
-                        max_retries=max_ret,
-                    )
-                else:
-                    result, last_usage = _parse_with_stream(
-                        prov,
-                        document,
-                        mime,
-                        "Sending document to LLM...",
-                        retry_on_validation_error=retry_on_validation_error,
-                        max_retries=max_ret,
-                    )
-            else:
-                feedback = _prompt_feedback()
-                if two_pass:
-                    result, last_usage = _parse_two_pass_with_display(
-                        prov,
-                        document,
-                        mime,
-                        previous_result=result,
-                        user_feedback=feedback or "Please review and improve the extraction.",
-                        retry_on_validation_error=retry_on_validation_error,
-                        max_retries=max_ret,
-                    )
-                else:
-                    result, last_usage = _parse_with_stream(
-                        prov,
-                        document,
-                        mime,
-                        "Sending refinement to LLM...",
-                        previous_result=result,
-                        user_feedback=feedback or "Please review and improve the extraction.",
-                        retry_on_validation_error=retry_on_validation_error,
-                        max_retries=max_ret,
-                    )
-        except Exception as e:
-            print(f"Error: {e}")
-            if _prompt_retry():
-                continue
-            return
-
-        if last_usage:
-            print(format_usage(last_usage))
-        print(format_result(result))
-        print(flush=True)  # ensure tables are flushed before prompt
-
-        if _prompt_accept():
-            break
-
-    _output_result(result)
+    print(f"Parsing {path.name}...", flush=True)
+    try:
+        result = parse_cv_from_lines(path, provider=provider, model=model, api_key=api_key)
+    except Exception as e:
+        print(f"Error: {e}")
+        return
+    print(format_result(result))
+    print(flush=True)
+    if _prompt_accept():
+        _output_result(result, path)
 
 
-def _parse_two_pass_with_display(prov, document, mime, **kwargs):
+def _parse_two_pass_with_display(prov_extraction, prov_classification, document, mime, **kwargs):
     """Two-pass parse with extraction and classification phases."""
     try:
         from rich.console import Console
@@ -478,7 +474,8 @@ def _parse_two_pass_with_display(prov, document, mime, **kwargs):
             print("Classifying items...\n--- Streaming ---", flush=True)
 
     result, usage = parse_two_pass(
-        prov,
+        prov_extraction,
+        prov_classification,
         document,
         mime,
         stream_callback=on_chunk,
@@ -534,26 +531,26 @@ def _run_batch_parse(
     retry_on_validation_error: bool,
     two_pass: bool,
     max_retries: int = 1,
+    use_extracted_text: bool = False,
+    model_extraction: str | None = None,
+    model_classification: str | None = None,
 ) -> None:
     """Batch parse: no verify loop, prompt output dir, individual/combined, JSON/CSV."""
+    results = []
     for p in paths:
         print(f"Parsing {p.name}...", flush=True)
-    results = parse_cvs(
-        paths,
-        provider=provider,
-        model=model,
-        api_key=api_key,
-        retry_on_validation_error=retry_on_validation_error,
-        max_retries=max_retries,
-        two_pass=two_pass,
-    )
+        try:
+            r = parse_cv_from_lines(p, provider=provider, model=model, api_key=api_key)
+            results.append((p, r))
+        except Exception as e:
+            print(f"  Error: {e}", flush=True)
     print(f"Parsed {len(results)} file(s).", flush=True)
 
     try:
         import questionary
-        out_dir = questionary.path("Output directory:", default=str(Path.cwd())).ask()
+        out_dir = questionary.path("Output directory:", default="output").ask()
     except ImportError:
-        out_dir = input(f"Output directory [{Path.cwd()}]: ").strip() or str(Path.cwd())
+        out_dir = input("Output directory [output]: ").strip() or "output"
     out_dir = Path(out_dir).expanduser().resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -647,7 +644,7 @@ def _prompt_retry() -> bool:
     return r.startswith("y")
 
 
-def _output_result(result: CVParseResult) -> None:
+def _output_result(result: CVParseResult, path: Path | None = None) -> None:
     """Prompt for format and output path, write JSON or CSV."""
     try:
         import questionary
@@ -655,19 +652,28 @@ def _output_result(result: CVParseResult) -> None:
     except ImportError:
         fmt = "JSON" if input("Format (json/csv): ").strip().lower().startswith("j") else "CSV"
 
-    default_name = "output.csv" if fmt == "CSV" else "output.json"
+    from datetime import datetime
+    ts = datetime.now().strftime("%Y-%m-%d_%H_%M_%S")
+    stem = path.stem if path else "output"
+    filename = f"parsed_{stem}_{ts}.csv" if fmt == "CSV" else f"parsed_{stem}_{ts}.json"
+    default_path = Path("output") / filename
     try:
         import questionary
         out = questionary.path(
-            f"Output file, directory (→ {default_name}), or Enter to print:",
-            default="",
+            f"Output file, directory, or Enter for {default_path}:",
+            default=str(default_path),
         ).ask()
     except ImportError:
-        out = input(f"Output file, directory (→ {default_name}), or Enter to print: ").strip()
+        out = input(f"Output file, directory, or Enter for {default_path}: ").strip() or str(default_path)
 
-    out_path = Path(out).expanduser().resolve() if out else None
-    if out_path and (out_path.is_dir() or (not out_path.suffix and not out_path.exists())):
-        out_path = out_path / default_name
+    if out and out.lower() in ("print", "-", "stdout"):
+        out_path = None
+    elif out:
+        out_path = Path(out).expanduser().resolve()
+        if out_path.is_dir() or (not out_path.suffix and not out_path.exists()):
+            out_path = out_path / filename
+    else:
+        out_path = Path.cwd() / default_path
     if fmt == "CSV":
         rows = combine_to_flat([result])
         export_csv(rows, out_path)

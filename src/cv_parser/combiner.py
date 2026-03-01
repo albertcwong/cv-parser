@@ -6,61 +6,53 @@ from pathlib import Path
 from cv_parser.schemas import CVParseResult
 
 FLAT_HEADERS = [
-    "name",
-    "email",
-    "phone",
+    "filename",
     "asset_type",
     "year",
     "title",
     "asset_sub_type",
     "status",
-    "institution",
     "role",
+    "institution",
 ]
 
 
 def flatten_result(result: CVParseResult) -> list[dict]:
     """Flatten a single CVParseResult into rows with FLAT_HEADERS columns."""
     rows = []
-    m = result.metadata
+    fn = result.metadata.filename or ""
     for p in result.publications:
         rows.append({
-            "name": m.name,
-            "email": m.email,
-            "phone": m.phone,
+            "filename": fn,
             "asset_type": "publication",
             "year": str(p.year),
             "title": p.title,
             "asset_sub_type": p.type.value,
             "status": p.status.value,
-            "institution": p.institution,
             "role": p.role.value,
+            "institution": p.institution,
         })
     for p in result.presentations:
         rows.append({
-            "name": m.name,
-            "email": m.email,
-            "phone": m.phone,
+            "filename": fn,
             "asset_type": "presentation",
             "year": str(p.year),
             "title": p.title,
             "asset_sub_type": p.type.value,
             "status": "",
-            "institution": p.institution,
             "role": p.role.value,
+            "institution": p.institution,
         })
     for r in result.recognitions:
         rows.append({
-            "name": m.name,
-            "email": m.email,
-            "phone": m.phone,
+            "filename": fn,
             "asset_type": "recognition",
             "year": str(r.year),
             "title": r.title,
             "asset_sub_type": "",
             "status": "",
-            "institution": r.institution,
             "role": "",
+            "institution": r.institution,
         })
     return rows
 

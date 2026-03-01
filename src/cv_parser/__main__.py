@@ -6,13 +6,13 @@ import os
 import sys
 from pathlib import Path
 
-from cv_parser.config import get_max_retries, get_retry_on_validation_error, get_two_pass, resolve
+from cv_parser.config import get_max_retries, get_retry_on_validation_error, get_temp_dir, get_two_pass, resolve
 
 
 def main() -> None:
     # Backward compat: cv_parser file.pdf -> cv_parser parse file.pdf; cv_parser -i -> cv_parser parse -i
     argv = sys.argv[1:]
-    if "parse" not in argv and "export" not in argv:
+    if "parse" not in argv and "export" not in argv and "extract" not in argv:
         if argv and not argv[0].startswith("-"):
             p = Path(argv[0]).expanduser()
             if p.exists() or p.suffix.lower() in (".pdf", ".docx", ".doc"):
@@ -97,11 +97,45 @@ def main() -> None:
     )
     parse_parser.add_argument(
         "--output-dir",
-        help="Output directory for batch parse (required when multiple paths).",
+        help="Output directory for batch parse (default: output).",
     )
     parse_parser.add_argument(
         "--consolidate",
         help="After batch parse, consolidate to CSV at this path.",
+    )
+    parse_parser.add_argument(
+        "--temp-dir",
+        help="Temp dir for topic classification output (default: tmp).",
+    )
+    parse_parser.add_argument(
+        "--use-extracted-text",
+        action="store_true",
+        help="Feed extracted text to LLM instead of original file (for comparison).",
+    )
+    parse_parser.add_argument(
+        "--text-input",
+        metavar="PATH",
+        help="Use pre-extracted text: file path (single) or dir with {stem}_raw_lines.txt (batch).",
+    )
+    parse_parser.add_argument(
+        "--model-extraction",
+        metavar="MODEL",
+        help="Model for extraction pass (default: model).",
+    )
+    parse_parser.add_argument(
+        "--model-classification",
+        metavar="MODEL",
+        help="Model for classification pass (default: model).",
+    )
+
+    # extract subcommand (raw lines only, no LLM)
+    extract_parser = subparsers.add_parser("extract", help="Extract raw lines from PDF/DOCX (no LLM)")
+    extract_parser.add_argument("path", nargs="+", help="Path(s) to PDF or docx.")
+    extract_parser.add_argument(
+        "--output-dir",
+        "-o",
+        default=None,
+        help="Output directory (default: tmp). Writes {stem}_raw_lines.txt per file.",
     )
 
     # export subcommand
@@ -131,11 +165,32 @@ def main() -> None:
         args.two_pass = False
         args.no_two_pass = False
 
-    prov, mod, key = resolve(
+    prov, mod, key, mod_ext, mod_cls = resolve(
         provider=getattr(args, "provider", None),
         model=getattr(args, "model", None),
         api_key=getattr(args, "api_key", None),
+        model_extraction=getattr(args, "model_extraction", None),
+        model_classification=getattr(args, "model_classification", None),
     )
+
+    if args.command == "extract":
+        out_dir = Path(getattr(args, "output_dir", None) or get_temp_dir()).expanduser().resolve()
+        out_dir.mkdir(parents=True, exist_ok=True)
+        from cv_parser.extract_text import write_raw_lines
+        from cv_parser.parser import MIME
+        for p in [Path(x).expanduser().resolve() for x in args.path]:
+            if not p.exists():
+                print(f"Error: file not found: {p}", file=sys.stderr)
+                sys.exit(1)
+            suffix = p.suffix.lower()
+            mime = MIME.get(suffix)
+            if not mime:
+                print(f"Error: unsupported format {suffix}", file=sys.stderr)
+                sys.exit(1)
+            out_path = out_dir / f"{p.stem}_raw_lines.txt"
+            write_raw_lines(p.read_bytes(), mime, out_path)
+            print(f"Wrote {out_path}", file=sys.stderr)
+        return
 
     if args.command == "export":
         paths = [Path(p).expanduser().resolve() for p in args.paths]
@@ -177,32 +232,22 @@ def main() -> None:
             print(f"Error: file not found: {p}", file=sys.stderr)
             sys.exit(1)
 
+    temp_dir = Path(getattr(args, "temp_dir", None) or get_temp_dir()).expanduser().resolve()
+
     if len(paths) > 1:
-        out_dir = getattr(args, "output_dir", None)
-        if not out_dir:
-            print("Error: --output-dir required for batch parse", file=sys.stderr)
-            sys.exit(1)
+        out_dir = getattr(args, "output_dir", None) or "output"
         out_dir = Path(out_dir).expanduser().resolve()
         out_dir.mkdir(parents=True, exist_ok=True)
         try:
-            from cv_parser.parser import parse_cvs
+            from cv_parser.line_parser import parse_cv_from_lines
             from cv_parser.combiner import combine_to_flat
             from cv_parser.export import export_csv, export_json
-            results = parse_cvs(
-                paths,
-                provider=prov,
-                model=mod,
-                api_key=key,
-                retry_on_validation_error=retry,
-                max_retries=max_retries,
-                two_pass=args.two_pass,
-            )
+            results = [(p, parse_cv_from_lines(p, provider=prov, model=mod, api_key=key)) for p in paths]
             for p, result in results:
                 export_json(result, out_dir / f"{p.stem}.json")
             consolidate_path = getattr(args, "consolidate", None)
             if consolidate_path:
-                all_results = [r for _, r in results]
-                rows = combine_to_flat(all_results)
+                rows = combine_to_flat([r for _, r in results])
                 export_csv(rows, Path(consolidate_path).expanduser().resolve())
                 print(f"Wrote {consolidate_path}", file=sys.stderr)
             print(f"Wrote {len(results)} JSON file(s) to {out_dir}", file=sys.stderr)
@@ -213,17 +258,9 @@ def main() -> None:
 
     path = paths[0]
     try:
-        from cv_parser.parser import parse_cv
+        from cv_parser.line_parser import parse_cv_from_lines
         from cv_parser.export import export_json
-        result = parse_cv(
-            path,
-            provider=prov,
-            model=mod,
-            api_key=key,
-            retry_on_validation_error=retry,
-            max_retries=max_retries,
-            two_pass=args.two_pass,
-        )
+        result = parse_cv_from_lines(path, provider=prov, model=mod, api_key=key)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)

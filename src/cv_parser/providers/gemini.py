@@ -63,10 +63,11 @@ class GeminiProvider:
             file = genai.upload_file(mime_type=mime_type, file_data=document)
             content = [file, prompt]
 
+        gen_config = {"temperature": 0}
         if stream_callback:
-            raw, usage = self._parse_stream(model, content, stream_callback)
+            raw, usage = self._parse_stream(model, content, stream_callback, gen_config)
         else:
-            response = model.generate_content(content)
+            response = model.generate_content(content, generation_config=gen_config)
             raw = response.text if response.text else str(response)
             usage = self._extract_usage(response)
 
@@ -90,11 +91,12 @@ class GeminiProvider:
                     errors.append(str(e2))
 
     def _parse_stream(
-        self, model: Any, content: Any, stream_callback: Callable[[str], None]
+        self, model: Any, content: Any, stream_callback: Callable[[str], None], gen_config: dict | None = None
     ) -> tuple[str, Usage | None]:
         raw_parts: list[str] = []
         usage: Usage | None = None
-        for chunk in model.generate_content(content, stream=True):
+        config = gen_config or {"temperature": 0}
+        for chunk in model.generate_content(content, stream=True, generation_config=config):
             if chunk.text:
                 raw_parts.append(chunk.text)
                 stream_callback(chunk.text)
@@ -165,7 +167,7 @@ class GeminiProvider:
         prompt = VALIDATION_FIX_PROMPT.format(errors=errors, raw=raw)
         model = genai.GenerativeModel(self.model)
         file = genai.upload_file(mime_type=mime_type or "application/pdf", file_data=document)
-        response = model.generate_content([file, prompt])
+        response = model.generate_content([file, prompt], generation_config={"temperature": 0})
         raw_out = response.text if response.text else str(response)
         usage = self._extract_usage(response)
         return self._parse_response(raw_out), usage

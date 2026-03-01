@@ -10,6 +10,7 @@ import pytest
 from cv_parser.config import (
     get_max_retries,
     get_retry_on_validation_error,
+    get_temp_dir,
     get_threads,
     get_two_pass,
     load_config,
@@ -57,7 +58,7 @@ def test_resolve_uses_config(tmp_path):
     config_file.write_text(json.dumps({"provider": "gemini", "model": "gemini-1.5"}))
     with patch("cv_parser.config._config_path", return_value=config_file):
         with patch.dict(os.environ, {}, clear=False):
-            p, m, k = resolve(provider=None, model=None, api_key=None)
+            p, m, k, *_ = resolve(provider=None, model=None, api_key=None)
     assert p == "gemini"
     assert m == "gemini-1.5"
 
@@ -104,12 +105,43 @@ def test_get_retry_from_config(tmp_path):
         assert get_retry_on_validation_error() is False
 
 
+def test_get_temp_dir_default(tmp_path):
+    """get_temp_dir returns tmp when not configured."""
+    with patch("cv_parser.config._config_path", return_value=tmp_path / "nonexistent.json"):
+        with patch.dict(os.environ, {}, clear=False):
+            assert get_temp_dir() == Path("tmp")
+
+
+def test_get_temp_dir_from_env(tmp_path):
+    """get_temp_dir reads CV_PARSER_TEMP_DIR."""
+    with patch("cv_parser.config._config_path", return_value=tmp_path / "nonexistent.json"):
+        with patch.dict(os.environ, {"CV_PARSER_TEMP_DIR": "/custom/tmp"}, clear=False):
+            assert get_temp_dir() == Path("/custom/tmp")
+
+
+def test_resolve_model_extraction_classification(tmp_path):
+    """resolve returns model_extraction and model_classification from config."""
+    config_file = tmp_path / "config.json"
+    config_file.parent.mkdir(parents=True, exist_ok=True)
+    config_file.write_text(json.dumps({
+        "provider": "openai",
+        "model": "gpt-4o",
+        "model_extraction": "gpt-4o-mini",
+        "model_classification": "gpt-4o",
+    }))
+    with patch("cv_parser.config._config_path", return_value=config_file):
+        with patch.dict(os.environ, {}, clear=False):
+            p, m, k, m_ext, m_cls = resolve(provider=None, model=None, api_key=None)
+    assert m_ext == "gpt-4o-mini"
+    assert m_cls == "gpt-4o"
+
+
 def test_resolve_cli_overrides_config(tmp_path):
     """CLI args override config."""
     config_file = tmp_path / "config.json"
     config_file.parent.mkdir(parents=True, exist_ok=True)
     config_file.write_text(json.dumps({"provider": "openai", "model": "gpt-4"}))
     with patch("cv_parser.config._config_path", return_value=config_file):
-        p, m, k = resolve(provider="anthropic", model=None, api_key=None)
+        p, m, k, *_ = resolve(provider="anthropic", model=None, api_key=None)
     assert p == "anthropic"
     assert m == "gpt-4"

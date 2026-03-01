@@ -51,9 +51,11 @@ def browse_and_select(
                 if p.is_dir():
                     ch.append(Choice(f"{p.name}/", value=p))
             ch.append(Separator())
-            for p in sorted(cwd.iterdir()):
-                if p.is_file() and p.suffix.lower() in extensions:
-                    ch.append(Choice(p.name, value=p, checked=(p in selected)))
+            files = [p for p in sorted(cwd.iterdir()) if p.is_file() and p.suffix.lower() in extensions]
+            for p in files:
+                ch.append(Choice(p.name, value=p, checked=(p in selected)))
+            if files:
+                ch.append(Choice("Select all", value="select_all"))
             ch.append(Separator("── Done / Cancel ──"))
             ch.append(Choice("Done", value="done"))
             ch.append(Choice("Cancel", value="cancel"))
@@ -64,9 +66,11 @@ def browse_and_select(
             for p in sorted(cwd.iterdir()):
                 if p.is_dir():
                     items.append((f"{p.name}/", p))
-            for p in sorted(cwd.iterdir()):
-                if p.is_file() and p.suffix.lower() in extensions:
-                    items.append((p.name, p))
+            files = [p for p in sorted(cwd.iterdir()) if p.is_file() and p.suffix.lower() in extensions]
+            for p in files:
+                items.append((p.name, p))
+            if files:
+                items.append(("Select all", "select_all"))
             items.append(("Done", "done"))
             items.append(("Cancel", "cancel"))
             ch = items
@@ -82,7 +86,7 @@ def browse_and_select(
                 ("class:qmark", f"{DEFAULT_QUESTION_PREFIX} "),
                 ("class:question", f" {title} — {cwd} "),
                 ("class:instruction", f"  Selected: {len(ic.selected_options)} file(s)  "),
-                ("class:instruction", "(↑↓ move  Space/Enter: select, open dir, or Done/Cancel)\n"),
+                ("class:instruction", "(↑↓ move  Space/Enter: select, Select all, open dir, Done/Cancel)\n"),
             ]
             return tokens
 
@@ -102,6 +106,14 @@ def browse_and_select(
             elif val == ".." or (isinstance(val, Path) and val.is_dir()):
                 ic.is_answered = True
                 event.app.exit(result=("navigate", val))
+            elif val == "select_all":
+                files = [c.value for c in ic.choices if isinstance(c.value, Path) and c.value.is_file()]
+                all_selected = all(f in ic.selected_options for f in files)
+                for f in files:
+                    if all_selected and f in ic.selected_options:
+                        ic.selected_options.remove(f)
+                    elif not all_selected and f not in ic.selected_options:
+                        ic.selected_options.append(f)
             else:
                 if val in ic.selected_options:
                     ic.selected_options.remove(val)
@@ -190,6 +202,17 @@ def browse_and_select(
             break
         if pick == "..":
             cwd = cwd.parent
+            continue
+        if pick == "select_all":
+            files = [p for p in cwd.iterdir() if p.is_file() and p.suffix.lower() in extensions]
+            selected = [p for p in selected if p.parent != cwd]
+            all_selected = all(f in selected for f in files)
+            for f in files:
+                if all_selected and f in selected:
+                    selected.remove(f)
+                elif not all_selected and f not in selected:
+                    selected.append(f)
+            selected = list(dict.fromkeys(selected))
             continue
         if isinstance(pick, Path) and pick.is_dir():
             cwd = pick

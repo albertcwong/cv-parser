@@ -12,7 +12,10 @@ SYSTEM_PROMPT = f"""Extract structured data from this professor CV for a busines
 
 Rules:
 - metadata: name, email, phone - extract from header/contact section of the CV
-- publications: year (int 1950-2030), type (book|journal|other), status (in_progress|published), institution (publisher), title, role (sole_author|co_author)
+- publications: year (int 1950-2030), type (book|journal|other), status (in_progress|published), institution, title, role (sole_author|co_author)
+  - role sole_author: CV owner is the only author listed (compare author names to metadata.name)
+  - role co_author: multiple authors listed (e.g. "Smith, J., Jones, A.") or snippet says "with X" / "co-authored with"
+  - institution: for type book = publisher (e.g. Harvard Business School Press); for type journal = journal name (e.g. Academy of Management Review). Do not mix.
 - presentations: title, year (int), type (conference|keynote|media|workshop|other), role (sole_presenter|co_presenter), institution
 - Use type "other" for publications or presentations when the classification does not fit neatly into the listed options.
 - recognitions: year (int), title, institution
@@ -34,20 +37,27 @@ Your previous output:
 
 Fix the JSON to match the schema. Return ONLY the valid JSON object."""
 
-EXTRACTION_PROMPT = """Extract EVERY publication, presentation, and recognition from this professor CV. Do not skip any. Scan the entire document thoroughly.
+EXTRACTION_PROMPT = """Extract metadata and EVERY publication, presentation, and recognition from this professor CV. Do not skip any. Scan the entire document thoroughly.
+
+First, extract metadata from the header/contact: name, email, phone.
 
 For each item, capture:
 - title: the item title
 - year: int 1950-2030 if identifiable, else null
 - institution: publisher/venue/organization if identifiable, else ""
 - snippet: the exact text from the document for this item
+- authors: the author string as it appears in the citation (e.g. "Smith, J." or "Smith, J., Jones, A.") — for publications only
 
 Output MUST be valid JSON:
 {
-  "raw_publications": [{"title": "...", "year": 2020, "institution": "...", "snippet": "..."}],
+  "metadata": {"name": "...", "email": "...", "phone": "..."},
+  "raw_publications": [{"title": "...", "year": 2020, "institution": "...", "snippet": "...", "authors": "..."}],
   "raw_presentations": [{"title": "...", "year": 2020, "institution": "...", "snippet": "..."}],
-  "raw_recognitions": [{"title": "...", "year": 2020, "institution": "...", "snippet": "..."}]
+  "raw_recognitions": [{"title": "...", "year": 2020, "institution": "...", "snippet": "..."}],
+  "raw_other": [{"title": "...", "year": null, "institution": "", "snippet": "..."}]
 }
+
+Put items in raw_other when they clearly do not fit publication, presentation, or recognition (e.g. teaching experience, committee work, education, employment history, other CV sections). Do not omit any line—capture everything.
 
 Return ONLY the JSON object, no markdown or explanation."""
 
@@ -61,7 +71,10 @@ Schema:
 
 Rules:
 - metadata: name, email, phone - extract from header/contact section of the CV
-- publications: year (int 1950-2030), type (book|journal|other), status (in_progress|published), institution (publisher), title, role (sole_author|co_author)
+- publications: year (int 1950-2030), type (book|journal|other), status (in_progress|published), institution, title, role (sole_author|co_author)
+  - role sole_author: CV owner ({cv_owner}) is the only author listed; compare authors field and snippet to metadata.name
+  - role co_author: multiple authors in authors field, or snippet says "with X" / "co-authored with"
+  - institution: for type book = publisher; for type journal = journal name. Do not mix.
 - presentations: title, year (int), type (conference|keynote|media|workshop|other), role (sole_presenter|co_presenter), institution
 - recognitions: year (int), title, institution
 - Use type "other" when classification does not fit neatly.
@@ -75,4 +88,6 @@ Previous result:
 Extracted items (unchanged):
 {raw_extraction}
 
-Revise the classification according to the feedback. Process every item. Return ONLY the JSON object matching the schema."""
+CV owner for role inference: {cv_owner}
+
+Revise the classification according to the feedback. For publications: sole_author when CV owner is the only author; co_author when multiple authors or "with X". institution: publisher for books, journal name for journals. Process every item. Return ONLY the JSON object matching the schema."""

@@ -7,6 +7,7 @@ from unittest.mock import patch
 import pytest
 
 from cv_parser.parser import (
+    _write_topic_classification_temp,
     estimate_tokens_from_bytes,
     estimate_tokens_from_text,
     parse_cv,
@@ -43,6 +44,27 @@ def test_parse_cv_unsupported_format():
         Path(path).unlink()
 
 
+def test_write_topic_classification_temp(tmp_path):
+    """_write_topic_classification_temp writes category | title per line."""
+    raw = {
+        "raw_publications": [{"title": "Paper A"}, {"title": "Paper B"}],
+        "raw_presentations": [{"title": "Talk X"}],
+        "raw_recognitions": [{"title": "Award Y"}],
+        "raw_other": [{"title": "Teaching Experience"}, {"title": "Committee Work"}],
+    }
+    out = tmp_path / "topic.txt"
+    _write_topic_classification_temp(raw, out)
+    lines = out.read_text(encoding="utf-8").strip().split("\n")
+    assert lines == [
+        "publication | Paper A",
+        "publication | Paper B",
+        "presentation | Talk X",
+        "recognition | Award Y",
+        "none | Teaching Experience",
+        "none | Committee Work",
+    ]
+
+
 def test_parse_cvs():
     """parse_cvs returns [(path, result), ...] for each input."""
     with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f1:
@@ -52,7 +74,7 @@ def test_parse_cvs():
         f2.write(b"%PDF-1.4 dummy")
         p2 = Path(f2.name)
     try:
-        fake_result = CVParseResult(metadata=ProfessorMetadata(name="Test"))
+        fake_result = CVParseResult(metadata=ProfessorMetadata(filename="test.pdf"))
         with patch("cv_parser.parser.parse_cv", return_value=fake_result) as m:
             out = parse_cvs([p1, p2])
         assert m.call_count == 2

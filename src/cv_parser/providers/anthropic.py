@@ -69,6 +69,7 @@ class AnthropicProvider:
                 model=self.model,
                 max_tokens=8192,
                 messages=[{"role": "user", "content": content}],
+                temperature=0,
             )
             raw = ""
             for block in response.content:
@@ -105,6 +106,7 @@ class AnthropicProvider:
             model=self.model,
             max_tokens=8192,
             messages=[{"role": "user", "content": content}],
+            temperature=0,
         ) as stream:
             for text in stream.text_stream:
                 raw_parts.append(text)
@@ -164,6 +166,7 @@ class AnthropicProvider:
             model=self.model,
             max_tokens=8192,
             messages=[{"role": "user", "content": content}],
+            temperature=0,
         )
 
         raw_out = ""

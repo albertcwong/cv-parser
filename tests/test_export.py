@@ -26,7 +26,7 @@ from cv_parser.schemas import (
 
 def _sample_result() -> CVParseResult:
     return CVParseResult(
-        metadata=ProfessorMetadata(name="Jane Doe"),
+        metadata=ProfessorMetadata(filename="cv.pdf"),
         publications=[
             Publication(
                 year=2020,
@@ -59,10 +59,17 @@ def test_export_csv_headers():
         text = path.read_text()
         reader = csv.DictReader(io.StringIO(text))
         assert reader.fieldnames == FLAT_HEADERS
+        assert "role" in FLAT_HEADERS
         data = list(reader)
         assert len(data) == 3
         for row in data:
             assert len(row) == len(FLAT_HEADERS)
+        pub_row = next(r for r in data if r["asset_type"] == "publication")
+        assert pub_row["role"] == "co_author"
+        pres_row = next(r for r in data if r["asset_type"] == "presentation")
+        assert pres_row["role"] == "sole_presenter"
+        rec_row = next(r for r in data if r["asset_type"] == "recognition")
+        assert rec_row["role"] == ""
     finally:
         path.unlink()
 
@@ -74,7 +81,7 @@ def test_export_json_single():
     try:
         export_json(r, path)
         data = json.loads(path.read_text())
-        assert data["metadata"]["name"] == "Jane Doe"
+        assert data["metadata"]["filename"] == "cv.pdf"
         assert len(data["publications"]) == 1
     finally:
         path.unlink()
@@ -89,6 +96,6 @@ def test_export_json_list():
         data = json.loads(path.read_text())
         assert isinstance(data, list)
         assert len(data) == 2
-        assert data[0]["metadata"]["name"] == "Jane Doe"
+        assert data[0]["metadata"]["filename"] == "cv.pdf"
     finally:
         path.unlink()

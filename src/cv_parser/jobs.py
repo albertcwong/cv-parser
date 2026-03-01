@@ -1,12 +1,35 @@
 """Async job queue for CV parsing with progress tracking."""
 
+import sys
 import threading
 from dataclasses import dataclass, field
+from datetime import datetime
 from enum import Enum
 from pathlib import Path
 from typing import Callable
 
 from cv_parser.schemas import CVParseResult
+
+_WORKER_THREAD_NAMES: set[str] = set()
+
+
+class _MutedStream:
+    """Stream that discards output from job worker threads."""
+
+    def __init__(self, real):
+        self._real = real
+
+    def write(self, s: str) -> int:
+        if threading.current_thread().name in _WORKER_THREAD_NAMES:
+            return len(s)
+        return self._real.write(s)
+
+    def flush(self) -> None:
+        if threading.current_thread().name not in _WORKER_THREAD_NAMES:
+            self._real.flush()
+
+    def __getattr__(self, name):
+        return getattr(self._real, name)
 
 
 class JobStatus(str, Enum):
@@ -14,6 +37,24 @@ class JobStatus(str, Enum):
     IN_PROGRESS = "in_progress"
     DONE = "done"
     FAILED = "failed"
+
+
+def _now() -> datetime:
+    return datetime.now().astimezone()
+
+
+def _format_dt(dt: datetime) -> str:
+    return dt.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def _format_runtime(seconds: float) -> str:
+    if seconds < 60:
+        return f"{seconds:.1f}s"
+    m, s = divmod(int(seconds), 60)
+    if m < 60:
+        return f"{m}m {s}s"
+    h, m = divmod(m, 60)
+    return f"{h}h {m}m {s}s"
 
 
 @dataclass
@@ -26,14 +67,25 @@ class Job:
     error: str | None = None
     phase: str = ""
     batch_id: int = 0
+    start_time: datetime | None = None
+    end_time: datetime | None = None
 
     @property
     def name(self) -> str:
         return self.path.name
 
+    @property
+    def runtime_seconds(self) -> float | None:
+        if self.start_time is None:
+            return None
+        end = self.end_time or _now()
+        return (end - self.start_time).total_seconds()
+
 
 class JobQueue:
     """Thread-safe job queue with worker pool."""
+
+    _streams_muted = False
 
     def __init__(self, num_threads: int = 2):
         self._jobs: list[Job] = []
@@ -45,12 +97,16 @@ class JobQueue:
         self._output_dir: Path | None = None
         self._provider: str | None = None
         self._model: str | None = None
+        self._model_extraction: str | None = None
+        self._model_classification: str | None = None
         self._api_key: str | None = None
         self._retry_on_validation_error = True
         self._max_retries = 1
         self._two_pass = True
         self._layout = "individual"
         self._format = "JSON"
+        self._temp_dir: Path | None = None
+        self._use_extracted_text = False
 
     def configure(
         self,
@@ -63,11 +119,19 @@ class JobQueue:
         two_pass: bool = True,
         layout: str = "individual",
         format: str = "JSON",
+        temp_dir: Path | None = None,
+        use_extracted_text: bool = False,
+        model_extraction: str | None = None,
+        model_classification: str | None = None,
     ) -> None:
         with self._lock:
             self._output_dir = output_dir
+            self._temp_dir = temp_dir
+            self._use_extracted_text = use_extracted_text
             self._provider = provider
             self._model = model
+            self._model_extraction = model_extraction
+            self._model_classification = model_classification
             self._api_key = api_key
             self._retry_on_validation_error = retry_on_validation_error
             self._max_retries = max_retries
@@ -113,14 +177,14 @@ class JobQueue:
             return [j for j in self._jobs if j.status == JobStatus.FAILED]
 
     def _worker(self) -> None:
-        from cv_parser.parser import parse_two_pass
-        from cv_parser.providers import get_provider
+        _WORKER_THREAD_NAMES.add(threading.current_thread().name)
+        try:
+            self._worker_loop()
+        finally:
+            _WORKER_THREAD_NAMES.discard(threading.current_thread().name)
 
-        MIME = {
-            ".pdf": "application/pdf",
-            ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            ".doc": "application/msword",
-        }
+    def _worker_loop(self) -> None:
+        from cv_parser.line_parser import parse_cv_from_lines
 
         while not self._stop.is_set():
             job = None
@@ -128,7 +192,8 @@ class JobQueue:
                 if self._queue and self._output_dir:
                     job = self._queue.pop(0)
                     job.status = JobStatus.IN_PROGRESS
-                    job.phase = "extraction"
+                    job.start_time = _now()
+                    job.phase = "augment"
                     job.progress = 0.0
 
             if job is None:
@@ -136,53 +201,18 @@ class JobQueue:
                 continue
 
             try:
-                document = job.path.read_bytes()
-                suffix = job.path.suffix.lower()
-                mime = MIME.get(suffix, "application/pdf")
-                prov = get_provider(
+                with self._lock:
+                    job.progress = 10.0
+                result = parse_cv_from_lines(
+                    job.path,
                     provider=self._provider,
                     model=self._model,
                     api_key=self._api_key,
                 )
 
-                from cv_parser.parser import estimate_tokens_from_bytes, estimate_tokens_from_text
-
-                total_est = 2 * estimate_tokens_from_bytes(len(document))
-                phase_tokens = total_est // 2
-                tokens_streamed = [0]
-                phase = ["extraction"]
-
-                def on_progress(pct: float, ph: str = ""):
-                    with self._lock:
-                        job.progress = min(100.0, pct)
-                        job.phase = ph
-
-                def stream_cb(chunk: str) -> None:
-                    tokens_streamed[0] += estimate_tokens_from_text(chunk)
-                    if phase[0] == "extraction":
-                        pct = 50.0 * min(1.0, tokens_streamed[0] / phase_tokens)
-                        on_progress(pct, "extraction")
-                    else:
-                        pct = 50.0 + 50.0 * min(1.0, tokens_streamed[0] / phase_tokens)
-                        on_progress(pct, "classification")
-
-                def on_classification_start() -> None:
-                    phase[0] = "classification"
-                    tokens_streamed[0] = 0
-                    on_progress(50.0, "classification")
-
-                result, _ = parse_two_pass(
-                    prov,
-                    document,
-                    mime,
-                    retry_on_validation_error=self._retry_on_validation_error,
-                    max_retries=self._max_retries,
-                    stream_callback=stream_cb,
-                    on_classification_start=on_classification_start,
-                )
-
                 with self._lock:
                     job.status = JobStatus.DONE
+                    job.end_time = _now()
                     job.progress = 100.0
                     job.phase = ""
                     job.result = result
@@ -217,6 +247,7 @@ class JobQueue:
             except Exception as e:
                 with self._lock:
                     job.status = JobStatus.FAILED
+                    job.end_time = _now()
                     job.error = str(e)
 
     def start(self) -> None:
@@ -225,10 +256,19 @@ class JobQueue:
             if self._workers:
                 return
             self._stop.clear()
-            for _ in range(self._num_threads):
-                t = threading.Thread(target=self._worker, daemon=True)
+            self._install_muted_streams()
+            for i in range(self._num_threads):
+                t = threading.Thread(target=self._worker, daemon=True, name=f"cv_parser_worker_{i}")
                 t.start()
                 self._workers.append(t)
+
+    def _install_muted_streams(self) -> None:
+        """Replace stdout/stderr with thread-aware mutes (once)."""
+        if JobQueue._streams_muted:
+            return
+        JobQueue._streams_muted = True
+        sys.stdout = _MutedStream(sys.stdout)
+        sys.stderr = _MutedStream(sys.stderr)
 
     def stop(self) -> None:
         self._stop.set()

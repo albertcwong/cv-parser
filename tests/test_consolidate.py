@@ -31,7 +31,7 @@ from cv_parser.schemas import (
 
 def _sample_result() -> CVParseResult:
     return CVParseResult(
-        metadata=ProfessorMetadata(name="Jane Doe", email="jane@edu", phone="555-1234"),
+        metadata=ProfessorMetadata(filename="jane.pdf"),
         publications=[
             Publication(
                 year=2020,
@@ -62,8 +62,7 @@ def test_flatten_result():
     rows = flatten_result(r)
     assert len(rows) == 3
     pub_row = next(x for x in rows if x["asset_type"] == "publication")
-    assert pub_row["name"] == "Jane Doe"
-    assert pub_row["email"] == "jane@edu"
+    assert pub_row["filename"] == "jane.pdf"
     assert pub_row["asset_type"] == "publication"
     assert pub_row["year"] == "2020"
     assert pub_row["title"] == "A Paper"
@@ -85,7 +84,7 @@ def test_flatten_result():
 def test_consolidate_two_results():
     r1 = _sample_result()
     r2 = CVParseResult(
-        metadata=ProfessorMetadata(name="John"),
+        metadata=ProfessorMetadata(filename="john.pdf"),
         publications=[
             Publication(
                 year=2019,
@@ -99,8 +98,8 @@ def test_consolidate_two_results():
     )
     rows = consolidate_to_flat([r1, r2])
     assert len(rows) == 4
-    names = {r["name"] for r in rows}
-    assert names == {"Jane Doe", "John"}
+    filenames = {r["filename"] for r in rows}
+    assert filenames == {"jane.pdf", "john.pdf"}
 
 
 def test_export_flat_csv_headers():
@@ -131,6 +130,6 @@ def test_load_results():
     try:
         results = load_results([path])
         assert len(results) == 1
-        assert results[0].metadata.name == "Jane Doe"
+        assert results[0].metadata.filename == "jane.pdf"
     finally:
         path.unlink()

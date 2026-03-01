@@ -12,6 +12,7 @@ from cv_parser.schemas import (
     PublicationRole,
     PublicationStatus,
     PublicationType,
+    RawItem,
     Recognition,
 )
 
@@ -60,21 +61,24 @@ def test_recognition_valid():
 
 def test_professor_metadata_defaults():
     m = ProfessorMetadata()
-    assert m.name == ""
-    assert m.email == ""
-    assert m.phone == ""
+    assert m.filename == ""
 
 
 def test_professor_metadata_full():
-    m = ProfessorMetadata(name="Jane Doe", email="jane@edu", phone="+1-555-1234")
-    assert m.name == "Jane Doe"
-    assert m.email == "jane@edu"
-    assert m.phone == "+1-555-1234"
+    m = ProfessorMetadata(filename="cv.pdf")
+    assert m.filename == "cv.pdf"
+
+
+def test_raw_item_with_authors():
+    r = RawItem(title="Paper", year=2020, institution="JOF", snippet="Smith, J. (2020). Paper. JOF.", authors="Smith, J.")
+    assert r.authors == "Smith, J."
+    r2 = RawItem(title="Paper", year=2020)
+    assert r2.authors == ""
 
 
 def test_cv_parse_result_empty():
     r = CVParseResult()
-    assert r.metadata.name == ""
+    assert r.metadata.filename == ""
     assert r.publications == []
     assert r.presentations == []
     assert r.recognitions == []
@@ -82,12 +86,10 @@ def test_cv_parse_result_empty():
 
 def test_cv_parse_result_with_metadata():
     r = CVParseResult(
-        metadata=ProfessorMetadata(name="John Smith", email="john@uni.edu"),
+        metadata=ProfessorMetadata(filename="cv.pdf"),
         publications=[],
     )
-    assert r.metadata.name == "John Smith"
-    assert r.metadata.email == "john@uni.edu"
-    assert r.metadata.phone == ""
+    assert r.metadata.filename == "cv.pdf"
 
 
 def test_cv_parse_result_full():

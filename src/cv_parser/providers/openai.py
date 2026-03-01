@@ -46,7 +46,7 @@ class OpenAIProvider:
         client = OpenAI(api_key=self._api_key)
         b64 = base64.b64encode(document).decode()
         file_data = f"data:{mime_type};base64,{b64}"
-        ext = "pdf" if mime_type == "application/pdf" else "docx"
+        ext = "txt" if mime_type == "text/plain" else "pdf" if mime_type == "application/pdf" else "docx"
         filename = f"cv.{ext}"
 
         if prompt is None:
@@ -70,6 +70,7 @@ class OpenAIProvider:
             response = client.responses.create(
                 model=self.model,
                 input=[{"role": "user", "content": content}],
+                temperature=0,
             )
             raw = self._extract_text_from_response(response)
             usage = self._extract_usage(response)
@@ -104,6 +105,7 @@ class OpenAIProvider:
             model=self.model,
             input=[{"role": "user", "content": content}],
             stream=True,
+            temperature=0,
         )
         for event in stream:
             if getattr(event, "type", "") == "response.output_text.delta":
@@ -175,6 +177,7 @@ class OpenAIProvider:
         response = client.responses.create(
             model=self.model,
             input=[{"role": "user", "content": content}],
+            temperature=0,
         )
         raw_out = self._extract_text_from_response(response)
         usage = self._extract_usage(response)
