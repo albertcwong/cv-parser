@@ -7,4 +7,4 @@ dist/
 build/
 
 tmp/
-notebooks/
+.env

@@ -1,12 +1,12 @@
 filename,asset_type,year,title,asset_sub_type,status,role,institution
 O'Reilly_CV_25-26.docx,publication,2022,Corporate Explorer: How Corporations Can Beat Startups at the Innovation Game,book,published,co_author,Wiley
-O'Reilly_CV_25-26.docx,publication,2025,Leadership for Organizations (3rd edition),book,published,co_author,Sage; Flatworld Publishing
+O'Reilly_CV_25-26.docx,publication,2025,Leadership for Organizations (3rd edition),book,published,co_author,Sage
 O'Reilly_CV_25-26.docx,publication,2021,Lead and Disrupt: How to Solve the Innovator’s Dilemma (2nd Edition),book,published,co_author,Stanford University Press
-O'Reilly_CV_25-26.docx,publication,2020,両利きの組織をつくる: 大企業病を打破する「攻めと守りの経営 (Creating Ambidextrous Organizations: Exploitation and Exploration for Overcoming Inertia),book,published,co_author,Toyo Keizai
+O'Reilly_CV_25-26.docx,publication,2020,Creating Ambidextrous Organizations: Exploitation and Exploration for Overcoming Inertia,book,published,co_author,Toyo Keizai
 O'Reilly_CV_25-26.docx,publication,2002,Winning through Innovation: A Practical Guide to Managing Organizational Change and Renewal (2nd edition),book,published,co_author,Harvard Business School Press
 O'Reilly_CV_25-26.docx,publication,2000,Hidden Value: How Companies Get Extraordinary Results with Ordinary People,book,published,co_author,Harvard Business School Press
 O'Reilly_CV_25-26.docx,publication,1989,"The Management of Organizations: Strategies, Tactics, Analyses",book,published,co_author,Harper-Collins
-O'Reilly_CV_25-26.docx,publication,2025,How Are Innovation-Oriented Organizational Cultures Developed? The Importance of CEO Personality,journal,in_progress,co_author,Industrial and Corporate Change
+O'Reilly_CV_25-26.docx,publication,2025,How Are Innovation-Oriented Organizational Cultures Developed? The Importance of CEO Personality,journal,published,co_author,Industrial and Corporate Change
 O'Reilly_CV_25-26.docx,publication,2025,Ambition as a double-edged sword: More career success and more unethical behavior,journal,published,co_author,Personality and Individual Differences
 O'Reilly_CV_25-26.docx,publication,2025,CEO personality: The cornerstone of organizational culture?,journal,published,co_author,Group & Organization Management
 O'Reilly_CV_25-26.docx,publication,2024,Toxic Cultures: How Narcissistic Leaders Undermine Psychological Safety,journal,published,co_author,Current Psychology
@@ -18,7 +18,7 @@ O'Reilly_CV_25-26.docx,publication,2021,When ‘me’ trumps ‘we’: Narcissis
 O'Reilly_CV_25-26.docx,publication,2021,Organizational power and politics: The narcissist’s advantage,journal,published,co_author,Personality and Individual Differences
 O'Reilly_CV_25-26.docx,publication,2021,"Why are grandiose narcissists more effective at organizational politics? Means, motive, and opportunity",journal,published,co_author,Personality and Individual Differences
 O'Reilly_CV_25-26.docx,publication,2021,"Grandiose narcissists and decision making: Impulsive, overconfident and skeptical of experts—but seldom in doubt",journal,published,co_author,Personality and Individual Differences
-O'Reilly_CV_25-26.docx,publication,2021,Management systems for exploration and exploitation,other,published,co_author,Research in the Sociology of Organizations
+O'Reilly_CV_25-26.docx,publication,2021,Management systems for exploration and exploitation,journal,published,co_author,Research in the Sociology of Organizations
 O'Reilly_CV_25-26.docx,publication,2020,"Conceit and deceit: Lying, cheating, and stealing among grandiose narcissists",journal,published,co_author,Personality and Individual Differences
 O'Reilly_CV_25-26.docx,publication,2020,Transformational leader or narcissist? How grandiose narcissists can create and destroy organizations and institutions,journal,published,co_author,California Management Review
 O'Reilly_CV_25-26.docx,publication,2019,"The three stages of disruptive innovation: Idea generation, incubation, and scaling",journal,published,co_author,California Management Review
@@ -54,10 +54,10 @@ O'Reilly_CV_25-26.docx,publication,2004,Asymmetric reactions to work group sex d
 O'Reilly_CV_25-26.docx,publication,2004,The ambidextrous organization,journal,published,co_author,Harvard Business Review
 O'Reilly_CV_25-26.docx,publication,2003,The determinants of team-based innovation in organizations: The role of social influence,journal,published,co_author,Small Group Research
 O'Reilly_CV_25-26.docx,publication,2002,Explorations of construct validity in a combined managerial and personality assessment programme,journal,published,co_author,Journal of Occupational and Organizational Psychology
-O'Reilly_CV_25-26.docx,publication,2002,The wrong kind of ownership,other,published,sole_author,Across the Board
+O'Reilly_CV_25-26.docx,publication,2002,The wrong kind of ownership,journal,published,sole_author,Across the Board
 O'Reilly_CV_25-26.docx,publication,1999,Managerial personality and performance: A semi-idiographic approach,journal,published,co_author,Journal of Research in Personality
 O'Reilly_CV_25-26.docx,publication,1998,CEO compensation as tournament and social comparison: A tale of two theories,journal,published,co_author,Administrative Science Quarterly
-O'Reilly_CV_25-26.docx,publication,1998,Group demography and innovation: Does diversity help?,other,published,co_author,Research on Managing in Groups and Teams
+O'Reilly_CV_25-26.docx,publication,1998,Group demography and innovation: Does diversity help?,journal,published,co_author,Research on Managing in Groups and Teams
 O'Reilly_CV_25-26.docx,publication,1998,Demography and diversity in organizations: A review of 40 years of research,journal,published,co_author,Research in Organizational Behavior
 O'Reilly_CV_25-26.docx,publication,1996,Social capital: The effects of social similarity and status on CEO compensation,journal,published,co_author,Academy of Management Journal
 O'Reilly_CV_25-26.docx,publication,1996,The ambidextrous organization: Managing evolutionary and revolutionary change,journal,published,co_author,California Management Review
@@ -79,7 +79,7 @@ O'Reilly_CV_25-26.docx,publication,1989,"Corporations, Culture and Commitment: M
 O'Reilly_CV_25-26.docx,publication,1989,Corporate Culture: Considerations based on an empirical study of high growth firms in Silicon Valley,journal,published,sole_author,Economia Aziendale
 O'Reilly_CV_25-26.docx,publication,1989,Beyond simple demographic effects: The importance of relational demography in superior-subordinate dyads,journal,published,co_author,Academy of Management Journal
 O'Reilly_CV_25-26.docx,publication,1987,Hospital demography and turnover among nurses,journal,published,co_author,Industrial Relations
-O'Reilly_CV_25-26.docx,publication,1987,"Soft skills, hard numbers",other,published,co_author,Training
+O'Reilly_CV_25-26.docx,publication,1987,"Soft skills, hard numbers",journal,published,co_author,Training
 O'Reilly_CV_25-26.docx,publication,1986,"Organizational commitment and psychological attachment: The effects of compliance, identification, and internalization on prosocial behavior",journal,published,co_author,Journal of Applied Psychology
 O'Reilly_CV_25-26.docx,publication,1986,Designing and linking human resource programs,journal,published,co_author,Training and Development Journal
 O'Reilly_CV_25-26.docx,publication,1985,The impact of information on job choice and turnover decisions,journal,published,co_author,Academy of Management Journal
@@ -89,7 +89,7 @@ O'Reilly_CV_25-26.docx,publication,1984,Organizational demography and turnover a
 O'Reilly_CV_25-26.docx,publication,1983,The use of information in organizational decision making: A model and some propositions,journal,published,sole_author,Research in Organizational Behavior
 O'Reilly_CV_25-26.docx,publication,1983,The effects of departmental demography on turnover: The case of a university,journal,published,co_author,Academy of Management Journal
 O'Reilly_CV_25-26.docx,publication,1983,Intrinsic motivation and responses to an organizational reward: A field test of the sufficiency of justification hypothesis,journal,published,co_author,Journal of Personality and Social Psychology
-O'Reilly_CV_25-26.docx,publication,1983,Managing poor performance and productivity in organizations,other,published,co_author,Research in Personnel and Human Resources Management
+O'Reilly_CV_25-26.docx,publication,1983,Managing poor performance and productivity in organizations,journal,published,co_author,Research in Personnel and Human Resources Management
 O'Reilly_CV_25-26.docx,publication,1982,Variations in decision makers' use of information sources: The impact of quality and accessibility of information,journal,published,sole_author,Academy of Management Journal
 O'Reilly_CV_25-26.docx,publication,1982,Task perceptions and job satisfaction: A question of causality,journal,published,co_author,Journal of Applied Psychology
 O'Reilly_CV_25-26.docx,publication,1982,Responses to failure: The effects of choice and responsibility on impression management,journal,published,co_author,Academy of Management Journal
@@ -142,13 +142,11 @@ O'Reilly_CV_25-26.docx,presentation,1972,Two empirical studies of the influence 
 O'Reilly_CV_25-26.docx,presentation,1974,Communication: A way of viewing organizations,conference,,co_presenter,Academy of Management
 O'Reilly_CV_25-26.docx,presentation,1977,Measuring organizational communication: Some instrument and aggregation problems,conference,,co_presenter,Academy of Management
 O'Reilly_CV_25-26.docx,presentation,1977,Interpersonal communication and objective and perceptual assessments of performance in organizations,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1977,"Superiors and peers as information sources, work group supportiveness, and individual decision-making performance",conference,,sole_presenter,Midwestern Psychological Association
 O'Reilly_CV_25-26.docx,presentation,1977,Professional workers and union activity: The impact of individual and contextual factors on the decision to strike,conference,,co_presenter,American Psychological Association
 O'Reilly_CV_25-26.docx,presentation,1976,The intentional distortion of information in organizational communication: A laboratory and field approach,conference,,sole_presenter,American Institute for Decision Sciences
 O'Reilly_CV_25-26.docx,presentation,1978,Some correlates of communication roles in organizations,conference,,co_presenter,Academy of Management
 O'Reilly_CV_25-26.docx,presentation,1977,Changing images of professionalism: The case of Public Health Nurses,conference,,co_presenter,American Sociological Association
 O'Reilly_CV_25-26.docx,presentation,1978,Informational influence as a determinant of task characteristics and job satisfaction,conference,,co_presenter,American Psychological Association
-O'Reilly_CV_25-26.docx,presentation,1979,What factors influence union decertification elections?,conference,,co_presenter,AFL-CIO Conference on Union Organizing
 O'Reilly_CV_25-26.docx,presentation,1979,Organizational communication and decision making: The impact of contextual factors on information acquisition and use in laboratory and field settings,conference,,co_presenter,The Institute of Management Sciences
 O'Reilly_CV_25-26.docx,presentation,1978,Collective bargaining by nurses: A comparative analysis of management and employee perceptions,conference,,co_presenter,American Public Health Association
 O'Reilly_CV_25-26.docx,presentation,1979,Perceptual measures of task characteristics: The biasing effects of differing frames of reference and job attitudes,conference,,co_presenter,Academy of Management
@@ -161,236 +159,261 @@ O'Reilly_CV_25-26.docx,presentation,1980,The decertification process: Evidence f
 O'Reilly_CV_25-26.docx,presentation,1980,Variations in decision makers' use of information sources: The impact of quality and accessibility of information,conference,,sole_presenter,Academy of Management
 O'Reilly_CV_25-26.docx,presentation,1981,Task perceptions and job satisfaction: A question of causality,conference,,co_presenter,Academy of Management
 O'Reilly_CV_25-26.docx,presentation,1981,Responses to failure: The effects of choice and responsibility on impression management,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1982,Personnel/human resources management in the United States: Some evidence of change,conference,,co_presenter,ORSA/TIMS
-O'Reilly_CV_25-26.docx,presentation,1982,The joint impact of source credibility and message content on decision making: An application to personnel selection,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1982,"The Dimensionality of Attitudinal Commitment, Behavioral Commitment and Job Satisfaction: A Confirmatory Factor Analysis",conference,,co_presenter,American Institute of Decision Sciences
-O'Reilly_CV_25-26.docx,presentation,1982,The effects of departmental demography on turnover: The case of a university,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1982,Intrinsic motivation and responses to an organizational reward: A field test of the sufficiency of justification hypothesis,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1983,Rewards and contexts: A field test of the overjustification effect,conference,,co_presenter,American Psychological Association
-O'Reilly_CV_25-26.docx,presentation,1983,"Corporations, cults, and organizational culture: Lessons from Silicon Valley companies",conference,,sole_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1984,Charisma as communication: The impact of top management credibility and philosophy on employee involvement,conference,,sole_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1983,The impact of information on job choice and turnover decisions,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1982,The impact of normative social influence and cohesiveness on task perceptions and attitudes: A social information processing approach,conference,,co_presenter,American Psychological Association
-O'Reilly_CV_25-26.docx,presentation,1985,Organizational demography and the management of human resources: Problems and prospects for the next decade,conference,,sole_presenter,University of Minnesota (Industrial Relations Center)
-O'Reilly_CV_25-26.docx,presentation,1985,"Organizational commitment and psychological attachment: The effects of compliance, identification, and internalization on prosocial behavior",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1986,Organizational culture and effectiveness,conference,,sole_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1986,Source credibility as a determinant of information system use,conference,,co_presenter,TIMS/ORSA
-O'Reilly_CV_25-26.docx,presentation,1987,Message flow and decision making,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1987,The impact of experienced and observed rewards and punishments on attitudes and behaviors: A field test,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1987,The social psychology of successful human resource practices in strong culture firms: A multinational comparison,conference,,co_presenter,University of Michigan Symposium on Human Resource Management in the Multinational Corporation
-O'Reilly_CV_25-26.docx,presentation,1987,CEO compensation as tournament and social comparison: A tale of two theories,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1985,Positive effects from negative sanctions: The impact of rewards and punishments in a social context,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1986,"Group demography, social integration, and turnover",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1989,"Executive team demography, organizational innovation, and firm performance",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1989,Golden parachutes: CEOs and the exercise of social influence,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1986,"Mapping the intellectual structure of organizational behavior, 1972-1984: A co-citation analysis",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1990,Measuring person-job fit with a profile comparison process,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1990,"The CEO, the Board of Directors, and Executive Compensation: Who Controls Whom?",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1990,Building organizational commitment: A multi-firm study,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1990,People and organizational culture: A profile comparison approach to assessing person-organization fit,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1992,A profile comparison approach to person-job fit: More than a mirage,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1991,Being different: Relational demography and organizational attachment,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1993,Working Smarter and Harder: A Longitudinal Study of Managerial Success,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1994,Managerial personality and early career success: A profile comparison approach,conference,,co_presenter,Society for Industrial and Organizational Psychology
-O'Reilly_CV_25-26.docx,presentation,1995,Promoting team-based innovation: The use of normative influence,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1995,CEO pay and trickledown economics: The effect of CEO pay equity on employee wages,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1994,Social capital: The effects of social similarity and status on CEO compensation,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1996,Group demography and innovation: Does diversity help?,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,1999,The impact of relational demography on teamwork: Understanding when differences make a difference,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2000,The impact of high commitment values and practices on technology start-ups,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2001,Fitting in: The effects of relational demography and person-organization fit on group process and performance,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2001,The impact of high commitment values and practices on technology start-ups,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2002,Rational ambivalence: Asymmetric effects of work group demography on men and women’s responses to being in the minority,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2003,Women’s careers: The impact of sex and gender identity on career attainment,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2006,Setting the CEO’s pay: Economic and psychological perspectives,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2008,"A longitudinal study of positive affect, organizational changes, and career satisfaction",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2009,Organizational Ambidexterity: IBM and Emerging Business Opportunities,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2010,Understanding organizational ambidexterity: An investigation of the underlying micro-mechanisms,conference,,sole_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2012,Management Systems for Exploration and Exploitation: The Micro-Foundations of Organizational Ambidexterity,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2012,Organizational culture and performance in high technology firms: The effects of culture content and strength,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2013,"Organizational Ambidexterity: Past, Present and Future",conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2014,Progress on gender diversity for corporate boards: Are we running in place?,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2015,Minding the gender pay gap: Female CEOs and executive compensation,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2016,Paradigm lost: Reinvigorating the study of organizational culture,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2016,See you in court: How CEO narcissism increases firms’ vulnerability to lawsuits,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2022,How are innovation cultures developed? The importance of CEO personality,conference,,co_presenter,Academy of Management
-O'Reilly_CV_25-26.docx,presentation,2023,Organizational Culture Change: How Microsoft Transformed Its Culture,conference,,sole_presenter,Academy of Management
-deHaan_CV_25-26.pdf,publication,2025,Social Media Livestreaming: Investor Information or Persuasion?,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,Information Processing Costs,book,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,Generative AI in Financial Reporting,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,The Shadow Value of ‘Public’ Information,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,Social Media Livestreaming: Investor Information or Persuasion?,journal,in_progress,co_author,Journal of Accounting and Economics
-deHaan_CV_25-26.pdf,publication,2025,The Shadow Value of ‘Public’ Information,journal,in_progress,co_author,Journal of Finance
-deHaan_CV_25-26.pdf,publication,2025,Generative AI in Financial Reporting,journal,in_progress,co_author,Journal of Accounting Research
-deHaan_CV_25-26.pdf,publication,2025,Local-Thinking Bias,journal,published,co_author,The Accounting Review
-deHaan_CV_25-26.pdf,publication,2025,Information Processing Costs,book,published,co_author,Handbook on the Financial Reporting Environment
+deHaan_CV_25-26.pdf,publication,2025,Social Media Livestreaming: Investor Information or Persuasion?,other,in_progress,co_author,
+deHaan_CV_25-26.pdf,publication,2025,Information Processing Costs,book,published,co_author,Edward Elgar Publishing
+deHaan_CV_25-26.pdf,publication,2025,Generative AI in Financial Reporting,other,in_progress,co_author,
+deHaan_CV_25-26.pdf,publication,2025,The Shadow Value of ‘Public’ Information,other,in_progress,co_author,
+deHaan_CV_25-26.pdf,publication,2026,Social Media Livestreaming: Investor Information or Persuasion?,journal,in_progress,co_author,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,publication,2026,The Shadow Value of ‘Public’ Information,journal,in_progress,co_author,Journal of Finance
+deHaan_CV_25-26.pdf,publication,2026,Generative AI in Financial Reporting,journal,in_progress,co_author,Journal of Accounting Research
+deHaan_CV_25-26.pdf,publication,,Local-Thinking Bias,journal,published,co_author,The Accounting Review
+deHaan_CV_25-26.pdf,publication,,Information Processing Costs,book,published,co_author,Handbook on the Financial Reporting Environment
+deHaan_CV_25-26.pdf,recognition,2025,Chair for one student currently on market (Andrew Glover),,,,UW
+deHaan_CV_25-26.pdf,recognition,2025,Committee Member for one student on market (Xuan Su),,,,GSB
+deHaan_CV_25-26.pdf,recognition,2025,Chair of one fourth year (Li) and one third year (Sequeria),,,,
+deHaan_CV_25-26.pdf,recognition,2025,Advised three Summer Papers,,,,
+deHaan_CV_25-26.pdf,recognition,2025,Managing Editor,,,,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2025,Faculty Member,,,,AAA/Deloitte Doctoral Consortium
+deHaan_CV_25-26.pdf,recognition,2025,Reviewer,,,,Leeds School of Business
+deHaan_CV_25-26.pdf,recognition,2025,Director of SSRN Accounting Research Network & Editor of Disclosure e-journal,,,,SSRN
+deHaan_CV_25-26.pdf,recognition,2025,"Working Group Member, Retail Investor Survey",,,,World Economic Forum
+deHaan_CV_25-26.pdf,recognition,2025,"Committee Member, PMSI Certificate Committee",,,,Stanford
+deHaan_CV_25-26.pdf,recognition,2025,"Committee Member, FAB Ad Hoc Committee for one case",,,,
+deHaan_CV_25-26.pdf,recognition,2025,"Global study trip, Japan",,,,Stanford
+deHaan_CV_25-26.pdf,presentation,2025,Workshop & conference presentations; keynote presentations; panel discussions (summary count),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2025,Media interviews and articles (25+; summary),media,,sole_presenter,
+deHaan_CV_25-26.pdf,recognition,2025,"Received Chair, Class of 1968 Professor of Management",,,,
+deHaan_CV_25-26.pdf,recognition,2023,"Academic Appointment: Stanford University, Graduate School of Business (2023–present)",,,,Stanford University Graduate School of Business
+deHaan_CV_25-26.pdf,recognition,2023,MBA Class of 1963 Professor of Management,,,,Stanford University Graduate School of Business
+deHaan_CV_25-26.pdf,recognition,2023,Robert and Marilyn Jaedicke Faculty Fellow,,,,Stanford University Graduate School of Business
+deHaan_CV_25-26.pdf,recognition,2023,"Senior Fellow, Institute for Economic Policy Research (SIEPR)",,,,Stanford Institute for Economic Policy Research (SIEPR)
+deHaan_CV_25-26.pdf,recognition,2023,Associate Professor (2018–2023),,,,UW Foster School of Business
+deHaan_CV_25-26.pdf,recognition,2018,Assistant Professor (2016–2018),,,,UW Foster School of Business
+deHaan_CV_25-26.pdf,recognition,2016,Assistant Professor (2013–2016),,,,Stanford University Graduate School of Business
 deHaan_CV_25-26.pdf,publication,2013,Does Voluntary Adoption of a Clawback Provision Improve Financial Reporting Quality?,journal,published,co_author,Contemporary Accounting Research
 deHaan_CV_25-26.pdf,publication,2014,Reputation Repair after a Serious Restatement,journal,published,co_author,The Accounting Review
-deHaan_CV_25-26.pdf,publication,2015,Market (In)Attention and the Strategic Scheduling and Timing of Earnings Announcements,journal,published,co_author,Journal of Accounting and Economics
-deHaan_CV_25-26.pdf,publication,2015,Does the Revolving Door Affect the SEC’s Enforcement Outcomes?,journal,published,co_author,Journal of Accounting and Economics
-deHaan_CV_25-26.pdf,publication,2017,The Financial Crisis and Corporate Credit Ratings,journal,published,sole_author,The Accounting Review
+deHaan_CV_25-26.pdf,recognition,2012,Best Paper Award – Western AAA Meeting,,,,Western AAA Meeting
+deHaan_CV_25-26.pdf,publication,2015,Market (In)Attention and the Strategic Scheduling and Timing of Earnings Announcements,journal,published,co_author,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,publication,2015,Does the Revolving Door Affect the SEC’s Enforcement Outcomes?,journal,published,co_author,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2014,Selected for the 2014 Journal of Accounting and Economics Conference,,,,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,publication,2017,The Financial Crisis and Corporate Credit Ratings.,journal,published,co_author,The Accounting Review
+deHaan_CV_25-26.pdf,recognition,2012,Best PhD Paper Award – Western AAA Meeting,,,,Western AAA Meeting
 deHaan_CV_25-26.pdf,publication,2017,Do Weather-Induced Moods Affect the Processing of Earnings News?,journal,published,co_author,Journal of Accounting Research
 deHaan_CV_25-26.pdf,publication,2018,Capital Market Effects of Media Synthesis and Dissemination: Evidence from Robo-Journalism,journal,published,co_author,Review of Accounting Studies
-deHaan_CV_25-26.pdf,publication,2019,Long-Term Economic Consequences of Hedge Fund Activist Interventions,journal,published,co_author,Review of Accounting Studies
+deHaan_CV_25-26.pdf,recognition,2021,Best Paper Awards: FARS Section of AAA (2021); FARS Mid-Year Meeting (2017),,,,FARS / AAA
+deHaan_CV_25-26.pdf,publication,2019,Long-Term Economic Consequences of Hedge Fund Activist Interventions.,journal,published,co_author,Review of Accounting Studies
 deHaan_CV_25-26.pdf,publication,2019,Why do individual investors disregard accounting information? The roles of information awareness and acquisition costs.,journal,published,co_author,Journal of Accounting Research
-deHaan_CV_25-26.pdf,publication,2020,Strategic Disclosure and CEO Media Visibility,journal,published,co_author,Journal of Financial Reporting
-deHaan_CV_25-26.pdf,publication,2020,"Disclosure Processing Costs, Investors’ Information Choice, and Equity Market Outcomes: A Review",journal,published,co_author,Journal of Accounting and Economics
-deHaan_CV_25-26.pdf,publication,2021,Obfuscation in Mutual Funds,journal,published,co_author,Journal of Accounting and Economics
+deHaan_CV_25-26.pdf,recognition,2018,Selected for the 2018 FARS “Editors’ Picks” Plenary Session,,,,FARS
+deHaan_CV_25-26.pdf,publication,2020,Strategic Disclosure and CEO Media Visibility.,journal,published,co_author,Journal of Financial Reporting
+deHaan_CV_25-26.pdf,publication,2020,"Disclosure Processing Costs, Investors’ Information Choice, and Equity Market Outcomes: A Review.",journal,published,co_author,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2019,Selected for the 2019 Journal of Accounting and Economics Conference,,,,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,publication,2021,Obfuscation in Mutual Funds.,journal,published,co_author,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2020,Selected for the 2020 Journal of Accounting and Economics Conference,,,,Journal of Accounting & Economics
 deHaan_CV_25-26.pdf,publication,2023,How Resilient are Firms’ Financial Reporting Processes?,journal,published,co_author,Management Science
-deHaan_CV_25-26.pdf,publication,2023,Financial Reporting and Employee Job Search,journal,published,co_author,Journal of Accounting Research
-deHaan_CV_25-26.pdf,publication,2023,Retail Bond Investors and Credit Ratings,journal,published,co_author,Journal of Accounting and Economics
-deHaan_CV_25-26.pdf,publication,2023,Control Variables in Interactive Models,journal,published,co_author,Journal of Financial Reporting
-deHaan_CV_25-26.pdf,publication,2024,Buy Now Pay (Pain?) Later,journal,published,co_author,Management Science
-deHaan_CV_25-26.pdf,publication,2024,Measuring Investor Attention using Google Search,journal,published,co_author,Management Science
-deHaan_CV_25-26.pdf,publication,2024,Using and Interpreting Fixed Effects Models,journal,published,co_author,Journal of Accounting Research
-deHaan_CV_25-26.pdf,publication,2024,Market Access and Retail Trading Performance,journal,published,co_author,The Accounting Review
+deHaan_CV_25-26.pdf,publication,2023,Financial Reporting and Employee Job Search.,journal,published,co_author,Journal of Accounting Research
+deHaan_CV_25-26.pdf,publication,2023,Retail Bond Investors and Credit Ratings.,journal,published,co_author,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,publication,2023,Control Variables in Interactive Models.,journal,published,co_author,Journal of Financial Reporting
+deHaan_CV_25-26.pdf,publication,2024,Buy Now Pay (Pain?) Later.,journal,published,co_author,Management Science
+deHaan_CV_25-26.pdf,publication,2024,Measuring Investor Attention using Google Search.,journal,published,co_author,Management Science
+deHaan_CV_25-26.pdf,publication,2024,Using and Interpreting Fixed Effects Models.,journal,published,co_author,Journal of Accounting Research
+deHaan_CV_25-26.pdf,publication,2024,Market Access and Retail Trading Performance.,journal,published,co_author,The Accounting Review
 deHaan_CV_25-26.pdf,publication,2025,Local-Thinking Bias,journal,published,co_author,The Accounting Review
-deHaan_CV_25-26.pdf,publication,2025,Accounting Information and Trade Credit,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,The Shadow Value of ‘Public’ Information,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,Generative AI in Financial Reporting,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,Social Media Livestreaming: Investor Information or Persuasion?,journal,in_progress,co_author,
-deHaan_CV_25-26.pdf,publication,2025,Information Processing Costs,book,published,co_author,Edward Elgar Publishing
-deHaan_CV_25-26.pdf,publication,2025,Comment Letter to the SEC on proposed 24X National Exchange (File No. 10-2421),other,published,co_author,U.S. Securities and Exchange Commission
-deHaan_CV_25-26.pdf,publication,2020,Comment Letter to the SEC on proposed amendments to mutual fund disclosures (File No. S7-09-20),other,published,co_author,U.S. Securities and Exchange Commission
-deHaan_CV_25-26.pdf,presentation,2026,Invited Research Presentation(s),workshop,,sole_presenter,Singapore Management; National Univ. Singapore; NTU
-deHaan_CV_25-26.pdf,presentation,2025,Invited Research Presentation(s),conference,,sole_presenter,Colorado Conference; Berkeley; Utah State; Alberta Conference; Hawaii; FARS Conference; Iowa; Bridging Humans and AI Conference; German Joint Finance Seminar; Capital Group; SG Advisors; SoFi
-deHaan_CV_25-26.pdf,presentation,2024,Invited Research Presentation(s),conference,,sole_presenter,LBS; Wisconsin; Columbia; Tulane Conference; UIC; UC Riverside; SIEPR Financial Literacy Colloquium; JAR Registered Reports Conference; AI Flash Talks
-deHaan_CV_25-26.pdf,presentation,2023,Invited Research Presentation(s),conference,,sole_presenter,Boston College; Harvard; Arizona; Florida International; U Hong Kong; Colorado; UCSD; FARS; Houston; Michigan Conference; Notre Dame Conference; BAR
-deHaan_CV_25-26.pdf,presentation,2022,Invited Research Presentation(s),conference,,sole_presenter,MIT; Chicago; Stanford; Yale; Penn State; Concordia; George Washington; Miami; UW; La Trobe; UNSW; Hong Kong Polytechnic; BAR
-deHaan_CV_25-26.pdf,presentation,2021,Invited Research Presentation(s),conference,,sole_presenter,Pennsylvania; USC; UNC; Southern Methodist; LSE; Florida State; UT Dallas; Kentucky; Delaware; Michigan State; CUHK; Georgia State; Lehigh/Villanova
-deHaan_CV_25-26.pdf,presentation,2020,Invited Research Presentation(s),workshop,,sole_presenter,Carnegie Mellon; NYU; Yale; Early Insights in Accounting Webinar; UW; Missouri; Utah
-deHaan_CV_25-26.pdf,presentation,2019,Invited Research Presentation(s),conference,,sole_presenter,JAE Conference; Miami Winter Warm-Up; Northwestern; Texas; Georgia Tech; Iowa; Texas A&M; Arizona State
-deHaan_CV_25-26.pdf,presentation,2018,Invited Research Presentation(s),conference,,sole_presenter,FARS Plenary Session; UCLA Conference; Duke; Toronto; Washington University; Florida; Baruch; Swiss Finance Institute
-deHaan_CV_25-26.pdf,presentation,2017,Invited Research Presentation(s),conference,,sole_presenter,Harvard; Indiana; INSEAD; Penn State Conference; Tilburg Camp; Rotterdam; Erasmus; Southern Methodist; Virginia Darden
-deHaan_CV_25-26.pdf,presentation,2016,Invited Research Presentation(s),conference,,sole_presenter,HKUST Symposium; Washington; Rutgers; UBCOW Conference
-deHaan_CV_25-26.pdf,presentation,2015,Invited Research Presentation(s),conference,,sole_presenter,Chicago; Pennsylvania; Michigan; Berkeley; LBS; Utah; Stanford Camp; LBS Symposium; Illinois Young Scholars Symposium; Georgia; FARS Meeting
-deHaan_CV_25-26.pdf,presentation,2014,Invited Research Presentation(s),conference,,sole_presenter,"JAE Conference; Conference on Financial Economics and Accounting; Minnesota; San Francisco State; Ohio State; UNC; Rochester; University of Technology, Sydney"
-deHaan_CV_25-26.pdf,presentation,2013,Invited Research Presentation(s),conference,,sole_presenter,NYU; Rice; Berkeley; Miami; Arizona State; Stanford; Boston College; MIT; Northwestern; Columbia; Emory; Washington University
-deHaan_CV_25-26.pdf,presentation,2012,Invited Research Presentation(s),conference,,sole_presenter,Conference on Financial Economics and Accounting; UBCOW Conference; AAA Conference; Milgard CSLR Conference; AAA Western Regional; Washington; FARS
-deHaan_CV_25-26.pdf,presentation,2026,Panel: FARS Conference,conference,,sole_presenter,FARS Conference
-deHaan_CV_25-26.pdf,presentation,2025,Panel: Summit@StanfordGSB,conference,,sole_presenter,Stanford
-deHaan_CV_25-26.pdf,presentation,2025,Panel: West Coast Leadership Dialogue,conference,,sole_presenter,Stanford
-deHaan_CV_25-26.pdf,presentation,2025,Panel: Centennial Celebration,conference,,sole_presenter,Stanford
+deHaan_CV_25-26.pdf,recognition,2024,Selected for the 2024 Colorado Summer Conference,,,,Colorado Summer Conference
+deHaan_CV_25-26.pdf,publication,2025,Accounting Information and Trade Credit.,other,in_progress,co_author,
+deHaan_CV_25-26.pdf,recognition,2025,Selected for the 2025 Colorado Summer Conference,,,,Colorado Summer Conference
+deHaan_CV_25-26.pdf,publication,2025,Generative AI in Financial Reporting.,other,in_progress,co_author,
+deHaan_CV_25-26.pdf,recognition,2025,Selected for the 2025 Journal of Accounting Research Conference and 2024 JAR Registered Reports Conference,,,,Journal of Accounting Research
+deHaan_CV_25-26.pdf,presentation,2026,Invited research presentations (Singapore Management; National Univ. Singapore; NTU),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2025,Invited research presentations (Colorado Conference; Berkeley; Utah State; Alberta Conference; Hawaii; FARS; Conference; Iowa; Bridging Humans and AI Conference; German Joint Finance Seminar; Capital Group; SG Advisors; SoFi),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2024,Invited research presentations (LBS; Wisconsin; Columbia; Tulane Conference; UIC; UC Riverside; SIEPR Financial Literacy Colloquium; JAR Registered Reports Conference; AI Flash Talks),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2023,Invited research presentations (Boston College; Harvard; Arizona; Florida International; U Hong Kong; Colorado; UCSD; FARS; Houston; Michigan Conference; Notre Dame Conference; BAR),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2022,Invited research presentations (MIT; Chicago; Stanford; Yale; Penn State; Concordia; George Washington; Miami; UW; La Trobe; UNSW; Hong Kong Polytechnic; BAR),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2021,Invited research presentations (Pennsylvania; USC; UNC; Southern Methodist; LSE; Florida State; UT Dallas; Kentucky; Delaware; Michigan State; CUHK; Georgia State; Lehigh/Villanova),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2020,Invited research presentations (Carnegie Mellon; NYU; Yale; Early Insights in Accounting Webinar; UW; Missouri; Utah),other,,sole_presenter,Contemporary Accounting Research
+deHaan_CV_25-26.pdf,presentation,2019,Invited research presentations (JAE Conference; Miami Winter Warm-Up; Northwestern; Texas; Georgia Tech; Iowa; Texas A&M; Arizona State),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2018,Invited research presentations (FARS Plenary Session; UCLA Conference; Duke; Toronto; Washington University; Florida; Baruch; Swiss Finance Institute),conference,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2017,Invited research presentations (Harvard; Indiana; INSEAD; Penn State Conference; Tilburg Camp; Rotterdam; Erasmus; Southern Methodist; Virginia Darden),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2016,Invited research presentations (HKUST Symposium; Washington; Rutgers; UBCOW Conference),conference,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2015,Invited research presentations (Chicago; Pennsylvania; Michigan; Berkeley; LBS; Utah; Stanford Camp; LBS Symposium; Illinois Young Scholars Symposium; Georgia; FARS Meeting),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2014,"Invited research presentations (JAE Conference; Conference on Financial Economics and Accounting; Minnesota; San Francisco State; Ohio State; UNC; Rochester; University of Technology, Sydney)",conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2013,Invited research presentations (NYU; Rice; Berkeley; Miami; Arizona State; Stanford; Boston College; MIT; Northwestern; Columbia; Emory; Washington University),other,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2012,Invited research presentations (Conference on Financial Economics and Accounting; UBCOW Conference; AAA Conference; Milgard CSLR Conference; AAA Western Regional; Washington; FARS),conference,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2026,Panel: FARS Conference,conference,,co_presenter,FARS Conference
+deHaan_CV_25-26.pdf,presentation,2025,Panel: Summit@StanfordGSB,conference,,co_presenter,Stanford
+deHaan_CV_25-26.pdf,presentation,2025,Panel: West Coast Leadership Dialogue,conference,,co_presenter,Stanford
+deHaan_CV_25-26.pdf,presentation,2025,Panel: Centennial Celebration,conference,,co_presenter,Stanford
 deHaan_CV_25-26.pdf,presentation,2025,Keynote: Sullivan Scholar Forum,keynote,,sole_presenter,Iowa
 deHaan_CV_25-26.pdf,presentation,2025,Keynote: Deloitte Doctoral Consortium,keynote,,sole_presenter,Texas
 deHaan_CV_25-26.pdf,presentation,2025,Keynote: CAPANA Annual Conference,keynote,,sole_presenter,Taiwan
-deHaan_CV_25-26.pdf,presentation,2025,Panel: Labor & Accounting Group Conference,conference,,sole_presenter,Stanford
+deHaan_CV_25-26.pdf,presentation,2025,Panel: Labor & Accounting Group Conference,conference,,co_presenter,Stanford
 deHaan_CV_25-26.pdf,presentation,2025,Keynote: SARAC Conference,keynote,,sole_presenter,"Davos, Switzerland"
-deHaan_CV_25-26.pdf,presentation,2024,Panel: JAE Doctoral Consortium,conference,,sole_presenter,Stanford
+deHaan_CV_25-26.pdf,presentation,2024,Panel: JAE Doctoral Consortium,conference,,co_presenter,Stanford
 deHaan_CV_25-26.pdf,presentation,2024,Keynote: CUHK Accounting Conference,keynote,,sole_presenter,Hong Kong
 deHaan_CV_25-26.pdf,presentation,2023,"Keynote: Disclosure, Information Sharing, and Secrecy Workshop",keynote,,sole_presenter,
-deHaan_CV_25-26.pdf,presentation,2023,Discussion: FARS Conference – Conflicted regulators,conference,,sole_presenter,FARS Conference
-deHaan_CV_25-26.pdf,presentation,2022,Discussion: Brazil Conference – The SEC’s use of voluntary disclosure for the oversight of mandatory disclosure,conference,,sole_presenter,Brazil Conference
+deHaan_CV_25-26.pdf,presentation,2023,Discussion: FARS Conference – “Conflicted regulators”,conference,,sole_presenter,FARS Conference
+deHaan_CV_25-26.pdf,presentation,2022,Discussion: Brazil Conference – “The SEC’s use of voluntary disclosure for the oversight of mandatory disclosure”,conference,,sole_presenter,Brazil Conference
 deHaan_CV_25-26.pdf,presentation,2022,Keynote: Deloitte Doctoral Consortium,keynote,,sole_presenter,Texas
-deHaan_CV_25-26.pdf,presentation,2022,Panel: Deloitte Doctoral Consortium,conference,,sole_presenter,Texas
-deHaan_CV_25-26.pdf,presentation,2021,Panel: Deloitte Doctoral Consortium,conference,,sole_presenter,Texas
-deHaan_CV_25-26.pdf,presentation,2020,Panel: Deloitte Doctoral Consortium,conference,,sole_presenter,Texas
-deHaan_CV_25-26.pdf,presentation,2019,"Discussion: UNC/Duke Fall Camp – Financial reporting quality, turnover risk, and wage differentials: evidence from worker-level data",conference,,sole_presenter,UNC/Duke Fall Camp
-deHaan_CV_25-26.pdf,presentation,2019,Panel: Deloitte Doctoral Consortium,conference,,sole_presenter,Texas
+deHaan_CV_25-26.pdf,presentation,2022,Panel: Deloitte Doctoral Consortium,conference,,co_presenter,Texas
+deHaan_CV_25-26.pdf,presentation,2021,Panel: Deloitte Doctoral Consortium,conference,,co_presenter,Texas
+deHaan_CV_25-26.pdf,presentation,2020,Panel: Deloitte Doctoral Consortium,conference,,co_presenter,Texas
+deHaan_CV_25-26.pdf,presentation,2019,"Discussion: UNC/Duke Fall Camp – “Financial reporting quality, turnover risk, and wage differentials: evidence from worker-level data”",workshop,,sole_presenter,UNC/Duke Fall Camp
+deHaan_CV_25-26.pdf,presentation,2019,Panel: Deloitte Doctoral Consortium,conference,,co_presenter,Texas
 deHaan_CV_25-26.pdf,presentation,2019,Keynote: Deloitte Doctoral Consortium,keynote,,sole_presenter,Texas
-deHaan_CV_25-26.pdf,presentation,2019,Panel: CARE Conference,conference,,sole_presenter,Washington DC
-deHaan_CV_25-26.pdf,presentation,2018,Discussion: RAST Conference – Automatic summaries of earnings releases: attributes and effects on investors’ judgments,conference,,sole_presenter,RAST Conference
-deHaan_CV_25-26.pdf,presentation,2018,Discussion: Colorado Conference – Strategic subsidiary disclosure,conference,,sole_presenter,Colorado Conference
-deHaan_CV_25-26.pdf,presentation,2018,Discussion: Stanford Summer Camp – Looking under the hood: quantitative vs qualitative inputs to analysts’ forecasts of fundamental risk,conference,,sole_presenter,Stanford Summer Camp
-deHaan_CV_25-26.pdf,presentation,2017,Discussion: AAA Annual Meeting - Customers and financial reporting quality,conference,,sole_presenter,AAA Annual Meeting
-deHaan_CV_25-26.pdf,presentation,2017,Discussion: AAA Annual Meeting - Weather and voluntary management forecasts,conference,,sole_presenter,AAA Annual Meeting
-deHaan_CV_25-26.pdf,presentation,2016,Discussion: Wash U Dopuch Conference - When does peer information matter?,conference,,sole_presenter,Wash U Dopuch Conference
-deHaan_CV_25-26.pdf,presentation,2015,Discussion: FARS Conference - The hidden face of the media: how financial journalists produce information,conference,,sole_presenter,FARS Conference
-deHaan_CV_25-26.pdf,presentation,2014,Discussion: FARS Conference - Cash flow management and credit rating properties,conference,,sole_presenter,FARS Conference
-deHaan_CV_25-26.pdf,presentation,2014,Discussion: Stanford Summer Camp - Inherited identity and CEO compensation,conference,,sole_presenter,Stanford Summer Camp
+deHaan_CV_25-26.pdf,presentation,2019,Panel: CARE Conference,conference,,co_presenter,Washington DC
+deHaan_CV_25-26.pdf,presentation,2018,Discussion: RAST Conference – “Automatic summaries of earnings releases: attributes and effects on investors’ judgments.” Best discussant award winner.,conference,,sole_presenter,RAST Conference
+deHaan_CV_25-26.pdf,presentation,2018,Discussion: Colorado Conference – “Strategic subsidiary disclosure.”,conference,,sole_presenter,Colorado Conference
+deHaan_CV_25-26.pdf,presentation,2018,Discussion: Stanford Summer Camp – “Looking under the hood: quantitative vs qualitative inputs to analysts’ forecasts of fundamental risk.”,workshop,,sole_presenter,Stanford Summer Camp
+deHaan_CV_25-26.pdf,presentation,2017,Discussion: AAA Annual Meeting - “Customers and financial reporting quality.”,conference,,sole_presenter,AAA Annual Meeting
+deHaan_CV_25-26.pdf,presentation,2017,Discussion: AAA Annual Meeting - “Weather and voluntary management forecasts.”,conference,,sole_presenter,AAA Annual Meeting
+deHaan_CV_25-26.pdf,presentation,2016,Discussion: Wash U Dopuch Conference - “When does peer information matter?”,conference,,sole_presenter,Wash U Dopuch Conference
+deHaan_CV_25-26.pdf,presentation,2015,Discussion: FARS Conference - “The hidden face of the media: how financial journalists produce information.”,conference,,sole_presenter,FARS Conference
+deHaan_CV_25-26.pdf,presentation,2014,Discussion: FARS Conference - “Cash flow management and credit rating properties.”,conference,,sole_presenter,FARS Conference
+deHaan_CV_25-26.pdf,presentation,2014,Discussion: Stanford Summer Camp - “Inherited identity and CEO compensation.”,workshop,,sole_presenter,Stanford Summer Camp
+deHaan_CV_25-26.pdf,presentation,2025,Invited conference participation (JAR; JAE; Colorado; Utah; INSEAD; Alberta; CAPANA; Deloitte Doctoral Consortium; Labor & Accounting; Stanford Camp; CITE Transparency; Stanford GSB Centennial),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2024,Invited conference participation (JAR; JAE; JAR Registered Reports; RAST; Tulane; INSEAD; Stanford Camp; CUHK; Utah; Hoover Working Group on Corporate Governance; SITE Transparency; Teaching Personal Finance; BAR),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2023,Invited conference participation (JAR; JAE; Michigan; INSEAD; Utah; Stanford Camp; Notre Dame; Colorado; Washington; BAR),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2022,Invited conference participation (JAR; JAE; RAST; Utah; Deloitte Doctoral Consortium; INSEAD; Labor & Accounting Group; Colorado; UBCOW; Brazil),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2021,Invited conference participation (JAR; JAE; RAST; Deloitte Doctoral Consortium; JFR/FARS Methods Mini-Conference; Labor and Accounting Conference; Stanford Camp; UBCOW),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2020,Invited conference participation (JAR; JAE; RAST; CAR; Deloitte Doctoral Consortium; Utah; Stanford Camp),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2019,Invited conference participation (JAE; JAR; RAST; INSEAD; CARE; Colorado; Utah; Stanford Camp; UNC/Duke Fall Camp; UBCOW; Miami Winter Warm-Up),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2018,Invited conference participation (JAE; JAR; RAST; Colorado; Utah; INSEAD; Stanford Camp; UCLA; UBCOW),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2017,Invited conference participation (JAE; RAST; Utah; Penn State; Tilburg Spring Camp; Colorado; Stanford Camp; Junior Accounting Theory Conference),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2016,Invited conference participation (JAE; HKUST; RAST; CAR; Utah; Colorado; Washington University; Stanford Camp; UBCOW),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2015,Invited conference participation (JAE; RAST; Stanford Camp; LBS; Colorado; Penn State; Illinois Young Scholars Symposium),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2014,Invited conference participation (JAE; RAST; CAR; Stanford Camp; LBS; Colorado; Stanford Causality in the Social Sciences Conference; CFEA; AAA New Faculty Consortium),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2013,Invited conference participation (Stanford Camp; Stanford Conference on China Capital Markets),conference,,sole_presenter,Stanford
+deHaan_CV_25-26.pdf,presentation,2012,Invited conference participation (JAE; AFAANZ Doctoral Symposium; CFEA; Deloitte Doctoral Consortium; Milgard CSLR Conference; UBCOW),conference,,sole_presenter,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,presentation,2010,Invited conference participation (UBCOW; Southeast Summer Accounting Research Colloquium),conference,,sole_presenter,
+deHaan_CV_25-26.pdf,presentation,2009,Invited conference participation (UBCOW; FASB PhD Conference),conference,,sole_presenter,
+deHaan_CV_25-26.pdf,recognition,2025,Managing Editor (2025–present),,,,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2024,Editor (2022–2024),,,,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2024,"Director, SSRN Accounting Research Network (ARN) (2024–present)",,,,SSRN
+deHaan_CV_25-26.pdf,recognition,2024,"Editor, SSRN Accounting – Disclosure eJournal (2024–present)",,,,SSRN
+deHaan_CV_25-26.pdf,recognition,2022,Editor (2022–present),,,,Accountability in a Sustainable World Quarterly
+deHaan_CV_25-26.pdf,recognition,2023,Guest Editor (2020–2023),,,,Journal of Financial Reporting
+deHaan_CV_25-26.pdf,recognition,2024,Editorial Board Member (2018–2024),,,,Review of Accounting Studies
+deHaan_CV_25-26.pdf,recognition,2023,Editorial Board Member (2017–2023),,,,The Accounting Review
+deHaan_CV_25-26.pdf,recognition,2022,Associate Editor (2020–2022),,,,Management Science
+deHaan_CV_25-26.pdf,recognition,2021,Associate Editor (2019–2021),,,,Journal of Accounting Research
+deHaan_CV_25-26.pdf,recognition,2021,Editorial Board Member (2019–2021),,,,Journal of Accounting & Economics
+deHaan_CV_25-26.pdf,recognition,2025,Ad Hoc Referee,,,,Multiple journals (JAR; JAE; TAR; CAR; RAST; etc.)
+deHaan_CV_25-26.pdf,recognition,2022,Advisory Committee Member (2022–present),,,,Colorado Summer Accounting Conference
+deHaan_CV_25-26.pdf,recognition,2024,"Task Force Member, AAA Mid-Career Faculty Consortium",,,,AAA
+deHaan_CV_25-26.pdf,recognition,2022,"Chair, AAA/Deloitte/J. Michael Cook Doctoral Consortium (2019–2022)",,,,AAA/Deloitte/J. Michael Cook Doctoral Consortium
+deHaan_CV_25-26.pdf,recognition,2022,"Organizer, UBCOW Conference (2019–2022)",,,,UBCOW Conference
+deHaan_CV_25-26.pdf,recognition,2022,"Senior Planning Committee Member, The Tenure Project",,,,The Tenure Project
+deHaan_CV_25-26.pdf,recognition,2022,"Program Committee Member, RFS-GSU FinTech Conference",,,,RFS-GSU FinTech Conference
+deHaan_CV_25-26.pdf,recognition,2021,"Chair, JFR/FARS Research Methods Mini-Conference",,,,JFR/FARS
+deHaan_CV_25-26.pdf,recognition,2020,"Co-Founder, Early Insights in Accounting Webinar",,,,Early Insights in Accounting Webinar
+deHaan_CV_25-26.pdf,recognition,2019,"Co-Organizer, CARE Conference",,,,CARE Conference
+deHaan_CV_25-26.pdf,recognition,2019,"Discussion Leader, FARS Doctoral Consortium",,,,FARS Doctoral Consortium
+deHaan_CV_25-26.pdf,recognition,2017,"Track Coordinator, FARS Mid-Year Conference",,,,FARS Mid-Year Conference
+deHaan_CV_25-26.pdf,recognition,2025,"Co-Organizer, Stanford Summer Camp (2015–2016; 2025)",,,,Stanford Summer Camp
+deHaan_CV_25-26.pdf,recognition,2024,"Working Group Member, Retail Investor Survey (2024–present)",,,,World Economic Forum
+deHaan_CV_25-26.pdf,recognition,2025,"External Reviewer, Accounting Department",,,,Leeds School of Business
+deHaan_CV_25-26.pdf,recognition,2025,PMSI Certificate Steering Committee (2025–present),,,,Stanford
+deHaan_CV_25-26.pdf,recognition,2024,AI Curriculum & Coordination Committee (2024–present),,,,Stanford
+deHaan_CV_25-26.pdf,recognition,2024,PMSI Certificate Redesign Committee,,,,Stanford
+deHaan_CV_25-26.pdf,recognition,2023,Department Chair Search Committee,,,,UW
+deHaan_CV_25-26.pdf,recognition,2022,Professorship Review Committee (2020–2022),,,,UW
+deHaan_CV_25-26.pdf,recognition,2022,Research Support Committee (2021–2022),,,,UW
+deHaan_CV_25-26.pdf,recognition,2021,MBA Curriculum Committee (2019–2021),,,,UW
+deHaan_CV_25-26.pdf,recognition,2020,"Chair, Promotion & Tenure Task Force",,,,UW
+deHaan_CV_25-26.pdf,recognition,2020,"Vice Chair, Faculty Council (2019–2020)",,,,UW
+deHaan_CV_25-26.pdf,recognition,2020,Accounting Curriculum Committee (2019–2020),,,,UW
+deHaan_CV_25-26.pdf,recognition,2019,Scholarship Review Committee (2017–2019),,,,UW
+deHaan_CV_25-26.pdf,recognition,2019,Faculty Council Member (2017–2019),,,,UW
+deHaan_CV_25-26.pdf,recognition,2027,"Chair, Qianqian Li (expected 2027)",,,,
+deHaan_CV_25-26.pdf,recognition,2026,"Chair, Andrew Glover (expected 2026)",,,,
+deHaan_CV_25-26.pdf,recognition,2026,"Member, Xuan Su (expected 2026)",,,,
+deHaan_CV_25-26.pdf,recognition,2022,"Member, Edgar Rodriguez Vazquez (placement: Baruch)",,,,
+deHaan_CV_25-26.pdf,recognition,2022,"Member, Wei Ting Loh (placement: Singapore Management)",,,,
+deHaan_CV_25-26.pdf,recognition,2021,"Chair, John Wertz (placement: Indiana)",,,,
+deHaan_CV_25-26.pdf,recognition,2019,"Member, Rob Raney (placement: IESE)",,,,
+deHaan_CV_25-26.pdf,recognition,2019,"External Member, Ties de Kok (placement: Washington)",,,,
+deHaan_CV_25-26.pdf,recognition,2018,"Member, Rosh Sinha (placement: Indiana)",,,,
 deHaan_CV_25-26.pdf,presentation,2025,Disclosure Processing Costs,workshop,,sole_presenter,University of Iowa
 deHaan_CV_25-26.pdf,presentation,2022,Disclosure Processing Costs; Research Methods,workshop,,sole_presenter,Northwestern University
-deHaan_CV_25-26.pdf,presentation,2022,Disclosure Processing Costs; Research Methods,workshop,,sole_presenter,University of Miami
 deHaan_CV_25-26.pdf,presentation,2021,Research Methods,workshop,,sole_presenter,University of Tennessee
-deHaan_CV_25-26.pdf,presentation,2021,Research Methods,workshop,,sole_presenter,Spanish Accounting Association
 deHaan_CV_25-26.pdf,presentation,2018,Market Inattention; Research Methods,workshop,,sole_presenter,INSEAD
-deHaan_CV_25-26.pdf,presentation,2025,"Travel Now, Pay Later? What to Know Before You Splurge",media,,sole_presenter,New York Times
-deHaan_CV_25-26.pdf,presentation,2025,"AI Can Help With Retirement Planning, but It Can’t Replace a Human Advisor",media,,sole_presenter,Barron's
-deHaan_CV_25-26.pdf,presentation,2025,Day-Trading Restraints to Be Loosened Under Proposed Rule Change,media,,sole_presenter,Bloomberg
-deHaan_CV_25-26.pdf,presentation,2025,Inflation-Driven Debt Could Sink Economy,media,,sole_presenter,Creators.com
-deHaan_CV_25-26.pdf,presentation,2025,Canadian venues turning to split payments for pricey concert tickets as attendance wanes,media,,sole_presenter,The Globe and Mail
-deHaan_CV_25-26.pdf,presentation,2025,"Is buy now, pay later headed for a fall?",media,,sole_presenter,The Guardian
-deHaan_CV_25-26.pdf,presentation,2025,JPMorgan has had enough of grads accepting future-dated roles elsewhere,media,,sole_presenter,Fortune
-deHaan_CV_25-26.pdf,presentation,2025,"How much Buy Now, Pay Later debt is out there?",media,,sole_presenter,Marketplace
-deHaan_CV_25-26.pdf,presentation,2025,Popular Ticket Payment Method Can Be A Trap,media,,sole_presenter,Huffington Post
-deHaan_CV_25-26.pdf,presentation,2025,Employees Care About Organization Finances — But Do They Understand Them?,media,,sole_presenter,Insights by Stanford
-deHaan_CV_25-26.pdf,presentation,2025,"Weight loss drugs, DoorDash are entering BNPL space. Is 'bite now, pay later' a good idea?",media,,sole_presenter,USA Today
-deHaan_CV_25-26.pdf,presentation,2025,The risk of financing your errands.,media,,sole_presenter,The Atlantic
-deHaan_CV_25-26.pdf,presentation,2025,"Intrigued by buy-now, pay-later loans?",media,,sole_presenter,NPR Life Kit
-deHaan_CV_25-26.pdf,presentation,2025,"Buy now, pay later loans are becoming more popular. Here's what to know",media,,sole_presenter,NPR
-deHaan_CV_25-26.pdf,presentation,2024,"The hidden costs of buy now, pay later financing during the festive season",media,,sole_presenter,KOMO
-deHaan_CV_25-26.pdf,presentation,2024,"Buy Now, Pay Later Often a Debt Trap",media,,sole_presenter,Checkbook
-deHaan_CV_25-26.pdf,presentation,2024,"Pros and cons of buy now, pay later.",media,,sole_presenter,Your Money Podcast
-deHaan_CV_25-26.pdf,presentation,2024,How Could the Presidential Election Impact My Money?,media,,sole_presenter,The Wall Street Journal
-deHaan_CV_25-26.pdf,presentation,2024,"Comparing buy now, pay later plans: are installment plans a budget win or finance fail?",media,,sole_presenter,MoneySense
-deHaan_CV_25-26.pdf,presentation,2024,Money Talks: Understanding the Language of Business.,media,,sole_presenter,If/Then Podcast
-deHaan_CV_25-26.pdf,presentation,2024,"Good News for Shoppers Who Love Buy-Now, Pay-Later Programs",media,,sole_presenter,Time
-deHaan_CV_25-26.pdf,presentation,2024,"’Buy Now, Pay Later’ Has Americans Racking Up Phantom Debt",media,,sole_presenter,Bloomberg
-deHaan_CV_25-26.pdf,presentation,2024,"Buyer beware: Unregulated ‘buy now, pay later’ loans can lead to greater debt and higher costs for you.",media,,sole_presenter,Kansas City Star
-deHaan_CV_25-26.pdf,presentation,2024,Apple begins sharing BNPL data with Experian.,media,,sole_presenter,Payments Dive
-deHaan_CV_25-26.pdf,presentation,2024,"Apple's buy-now-pay-later service will report customer data to Experian, in a 'very positive first step' for consumers.",media,,sole_presenter,MarketWatch
-deHaan_CV_25-26.pdf,presentation,2024,People think buy-now-pay-later is helping them improve their credit. They’re wrong.,media,,sole_presenter,MarketWatch
-deHaan_CV_25-26.pdf,presentation,2024,"Buy Now, Pay Later has exploded in popularity. NY wants to regulate it.",media,,sole_presenter,Gothamist
-deHaan_CV_25-26.pdf,presentation,2023,Americans May Be Taking On Too Much Pay-Later ‘Phantom Debt’,media,,sole_presenter,New York Times
-deHaan_CV_25-26.pdf,presentation,2023,"Breaking down buy now, pay later.",media,,sole_presenter,Retail Dive
-deHaan_CV_25-26.pdf,presentation,2023,Why Is Palo Alto Networks Reporting After-the-Bell on a Summer Friday?,media,,sole_presenter,Investing.com
-deHaan_CV_25-26.pdf,presentation,2023,The Cost Of Hiding Negative News.,media,,sole_presenter,Mondaq
-deHaan_CV_25-26.pdf,presentation,2023,Will BNPL pass the test?,media,,sole_presenter,Payments Dive
-deHaan_CV_25-26.pdf,presentation,2023,"Ernst & Young, after its failed split, could find itself vulnerable to staff poaching.",media,,sole_presenter,The Wall Street Journal
-deHaan_CV_25-26.pdf,presentation,2023,BNPL remains mainly absent from consumer credit histories.,media,,sole_presenter,Payments Dive
-deHaan_CV_25-26.pdf,presentation,2023,U.S. Regulators to Scrutinize Payment Methods.,media,,sole_presenter,NACS
-deHaan_CV_25-26.pdf,presentation,2023,What payments can expect from Washington this year.,media,,sole_presenter,Payments Dive
-deHaan_CV_25-26.pdf,presentation,2022,New MBA Courses At The Top U.S. B-Schools.,media,,sole_presenter,Yahoo News
-deHaan_CV_25-26.pdf,presentation,2022,"Initial seven Foster Purpose Grants seed projects advancing leadership, insight, progress",media,,sole_presenter,Foster Business Magazine
-deHaan_CV_25-26.pdf,presentation,2021,The unspeakable limits of disclosure,media,,sole_presenter,Compliance Watch
-deHaan_CV_25-26.pdf,presentation,2020,The Delicate Dance of Timing Earnings Releases,media,,sole_presenter,Lexology
-deHaan_CV_25-26.pdf,presentation,2020,Notes on (How Not to Have) a Scandal,media,,sole_presenter,Forward Magazine
-deHaan_CV_25-26.pdf,presentation,2019,Choosing the Right Earnings Day is a Complex Task for Finance Executives,media,,sole_presenter,The Wall Street Journal
-deHaan_CV_25-26.pdf,presentation,2019,Activists provide sugar hit,media,,sole_presenter,Investors Chronicle
-deHaan_CV_25-26.pdf,presentation,2019,Investing Lessons From the Activist Playbook,media,,sole_presenter,Barron's
-deHaan_CV_25-26.pdf,presentation,2018,President Trump Wants to Get Rid of Quarterly Earnings Reports,media,,sole_presenter,Journal Times
-deHaan_CV_25-26.pdf,presentation,2018,"Tesla, Papa John’s Gaffes Boost Odds of Accounting Miscues",media,,sole_presenter,Bloomberg
-deHaan_CV_25-26.pdf,presentation,2018,"ASX Lessons, SGX’s Tech Ambitions",media,,sole_presenter,Medium
-deHaan_CV_25-26.pdf,presentation,2018,Some good news for comScore? Here’s the latest.,media,,sole_presenter,Washington Business Journal
-deHaan_CV_25-26.pdf,presentation,2018,Automated articles on corporate earnings strengthen capital markets.,media,,sole_presenter,Foster Business
-deHaan_CV_25-26.pdf,presentation,2018,ComScore hires Goldman Sachs to explore a sale — but it's likely to be at a discount.,media,,sole_presenter,Washington Business Journal
-deHaan_CV_25-26.pdf,presentation,2017,How robo-journalism is redefining results reporting.,media,,sole_presenter,IR Magazine
-deHaan_CV_25-26.pdf,presentation,2017,Embattled comScore is running out of options,media,,sole_presenter,Washington Business Journal
-deHaan_CV_25-26.pdf,presentation,2017,Should we stop the ‘revolving door’?,media,,sole_presenter,Chicago Booth Review
-deHaan_CV_25-26.pdf,presentation,2017,Chaos at Uber reverberates in industry known for ‘frat-boy’ culture,media,,sole_presenter,Christian Science Monitor
-deHaan_CV_25-26.pdf,presentation,2016,"Vol. 28, No. 12: A Nurse Doctor.",media,,sole_presenter,The Wall Street Journal
-deHaan_CV_25-26.pdf,presentation,2016,"As Welspun stares into the abyss, can it reinvent itself?",media,,sole_presenter,Mint
-deHaan_CV_25-26.pdf,presentation,2016,Is it time to get rid of quarterly earnings reports?,media,,sole_presenter,NPR Marketplace
-deHaan_CV_25-26.pdf,presentation,2016,Scandals do not always sink a company’s stock.,media,,sole_presenter,USA Today
-deHaan_CV_25-26.pdf,presentation,2016,Coping with a scandal.,media,,sole_presenter,Treasury Today
-deHaan_CV_25-26.pdf,presentation,2015,SEC's Republicans tried to block $52M in corporate penalties last month.,media,,sole_presenter,Politico
-deHaan_CV_25-26.pdf,presentation,2015,SEC rule proposal prompts rush to alter clawback policies.,media,,sole_presenter,Financial Times
-deHaan_CV_25-26.pdf,presentation,2015,Betting on biotech: Activists want SEC to regulate volatile market.,media,,sole_presenter,Aljazeera
-deHaan_CV_25-26.pdf,presentation,2015,How bad weather could affect stock prices.,media,,sole_presenter,The Wall Street Journal
-deHaan_CV_25-26.pdf,presentation,2014,GSK picks good day to announce Chinese bribery fine.,media,,sole_presenter,Financial Times
-deHaan_CV_25-26.pdf,recognition,2025,"Received Chair, Class of 1968 Professor of Management",,,,Stanford Graduate School of Business
-deHaan_CV_25-26.pdf,recognition,2012,Best Paper Award – Western AAA Meeting,,,,Western AAA Meeting
-deHaan_CV_25-26.pdf,recognition,2014,Selected for the Journal of Accounting and Economics Conference,,,,Journal of Accounting and Economics Conference
-deHaan_CV_25-26.pdf,recognition,2012,Best PhD Paper Award – Western AAA Meeting,,,,Western AAA Meeting
-deHaan_CV_25-26.pdf,recognition,2021,Best Paper Award – FARS Section of AAA,,,,FARS Section of AAA
-deHaan_CV_25-26.pdf,recognition,2018,Selected for FARS “Editors’ Picks” Plenary Session,,,,FARS
-deHaan_CV_25-26.pdf,recognition,2019,Selected for the Journal of Accounting and Economics Conference,,,,Journal of Accounting and Economics Conference
-deHaan_CV_25-26.pdf,recognition,2020,Selected for the Journal of Accounting and Economics Conference,,,,Journal of Accounting and Economics Conference
-deHaan_CV_25-26.pdf,recognition,2024,Selected for the Colorado Summer Conference,,,,Colorado Summer Accounting Conference
-deHaan_CV_25-26.pdf,recognition,2025,Selected for the Colorado Summer Conference,,,,Colorado Summer Accounting Conference
-deHaan_CV_25-26.pdf,recognition,2025,Selected for the Journal of Accounting Research Conference,,,,Journal of Accounting Research Conference
 deHaan_CV_25-26.pdf,recognition,2024,Distinguished Teaching Award,,,,Stanford
-deHaan_CV_25-26.pdf,recognition,2023,Evening MBA Professor of the Year,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2021,MBA Professor of the Year,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2021,Outstanding PhD Mentor Award,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2018,PACCAR Teaching Excellence Award,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2018,Charles Summer Memorial Teaching Award,,,,University of Washington
+deHaan_CV_25-26.pdf,recognition,2023,Evening MBA Professor of the Year,,,,UW
+deHaan_CV_25-26.pdf,recognition,2021,MBA Professor of the Year,,,,UW
+deHaan_CV_25-26.pdf,recognition,2021,Outstanding PhD Mentor Award,,,,UW
+deHaan_CV_25-26.pdf,recognition,2018,PACCAR Teaching Excellence Award,,,,UW
+deHaan_CV_25-26.pdf,recognition,2018,Charles Summer Memorial Teaching Award,,,,UW
 deHaan_CV_25-26.pdf,recognition,2016,MSx Teaching Excellence Award,,,,Stanford
-deHaan_CV_25-26.pdf,recognition,2011,PhD Teaching Award,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2022,Daniel R. Siegel Service Award,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2022,Fowler Award for Special Achievement,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2020,Dean’s Award for Faculty Research,,,,University of Washington
-deHaan_CV_25-26.pdf,recognition,2022,Mentioned in SEC Rule 33-11125 (Tailored Shareholder Reports for Mutual Funds and Exchange-Traded Funds; Fee Information in Investment Company Advertisements),,,,U.S. Securities and Exchange Commission
-deHaan_CV_25-26.pdf,recognition,2022,Mentioned in Statement by SEC Commissioner Crenshaw (Statement on Tailored Shareholder Reports for Mutual Funds and Exchange Traded Funds),,,,U.S. Securities and Exchange Commission
-deHaan_CV_25-26.pdf,recognition,2022,Mentioned in SEC Rule 33-11126 (Listing Standards for Recovery of Erroneously Awarded Compensation),,,,U.S. Securities and Exchange Commission
-deHaan_CV_25-26.pdf,recognition,2021,Mentioned in Statement by SEC Commissioner Crenshaw (The Lessons of Structured Data),,,,U.S. Securities and Exchange Commission
+deHaan_CV_25-26.pdf,recognition,2011,PhD Teaching Award,,,,UW
+deHaan_CV_25-26.pdf,recognition,2022,Daniel R. Siegel Service Award,,,,UW
+deHaan_CV_25-26.pdf,recognition,2022,Fowler Award for Special Achievement,,,,UW
+deHaan_CV_25-26.pdf,recognition,2020,Dean’s Award for Faculty Research,,,,UW
+deHaan_CV_25-26.pdf,recognition,2025,Comment Letter to the SEC on proposed 24X National Exchange (File No. 10-2421),,,,U.S. Securities and Exchange Commission (SEC)
+deHaan_CV_25-26.pdf,recognition,2020,Comment Letter to the SEC on proposed amendments to mutual fund disclosures (File No. S7-09-20),,,,U.S. Securities and Exchange Commission (SEC)
+deHaan_CV_25-26.pdf,recognition,2022,Mentioned in SEC Rule 33-11125: Tailored Shareholder Reports for Mutual Funds and Exchange-Traded Funds; Fee Information in Investment Company Advertisements,,,,U.S. Securities and Exchange Commission (SEC)
+deHaan_CV_25-26.pdf,recognition,2022,Mentioned in statement by SEC Commissioner Crenshaw: Statement on Tailored Shareholder Reports for Mutual Funds and Exchange Traded Funds,,,,U.S. Securities and Exchange Commission (SEC)
+deHaan_CV_25-26.pdf,recognition,2022,Mentioned in SEC Rule 33-11126: Listing Standards for Recovery of Erroneously Awarded Compensation,,,,U.S. Securities and Exchange Commission (SEC)
+deHaan_CV_25-26.pdf,recognition,2021,Mentioned in statement by SEC Commissioner Crenshaw: The Lessons of Structured Data,,,,U.S. Securities and Exchange Commission (SEC)
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “Travel Now, Pay Later? What to Know Before You Splurge”",,,,The New York Times
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “AI Can Help With Retirement Planning, but It Can’t Replace a Human Advisor”",,,,Barron's
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “Day-Trading Restraints to Be Loosened Under Proposed Rule Change”,,,,Bloomberg
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “Inflation-Driven Debt Inflation-Driven Debt Could Sink Economy”,,,,Creators.com
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “Canadian venues turning to split payments for pricey concert tickets as attendance wanes”,,,,The Globe and Mail
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “Is buy now, pay later headed for a fall?”",,,,The Guardian
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “JPMorgan has had enough of grads accepting future-dated roles elsewhere”,,,,Fortune
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “How much Buy Now, Pay Later debt is out there?”",,,,Marketplace
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “Popular Ticket Payment Method Can Be A Trap”,,,,HuffPost
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “Employees Care About Organization Finances — But Do They Understand Them?”,,,,Insights by Stanford
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “Weight loss drugs, DoorDash are entering BNPL space. Is 'bite now, pay later' a good idea?”",,,,USA Today
+deHaan_CV_25-26.pdf,recognition,2025,Press mention: “The risk of financing your errands.”,,,,The Atlantic
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “Intrigued by buy-now, pay-later loans?”",,,,NPR Life Kit
+deHaan_CV_25-26.pdf,recognition,2025,"Press mention: “Buy now, pay later loans are becoming more popular. Here's what to know”",,,,NPR
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “The hidden costs of buy now, pay later financing during the festive season”",,,,KOMO
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Buy Now, Pay Later Often a Debt Trap”",,,,Checkbook
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Pros and cons of buy now, pay later.”",,,,Your Money Podcast
+deHaan_CV_25-26.pdf,recognition,2024,Press mention: “How Could the Presidential Election Impact My Money?”,,,,The Wall Street Journal
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Comparing buy now, pay later plans: are installment plans a budget win or finance fail?”",,,,MoneySense
+deHaan_CV_25-26.pdf,recognition,2024,Press mention: “Money Talks: Understanding the Language of Business.”,,,,If/Then Podcast
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Good News for Shoppers Who Love Buy-Now, Pay-Later Programs”",,,,Time
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “’Buy Now, Pay Later’ Has Americans Racking Up Phantom Debt”",,,,Bloomberg
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Buyer beware: Unregulated ‘buy now, pay later’ loans can lead to greater debt and higher costs for you.”",,,,Kansas City Star
+deHaan_CV_25-26.pdf,recognition,2024,Press mention: “Apple begins sharing BNPL data with Experian.”,,,,Payments Dive
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Apple's buy-now-pay-later service will report customer data to Experian, in a 'very positive first step' for consumers.”",,,,MarketWatch
+deHaan_CV_25-26.pdf,recognition,2024,Press mention: “People think buy-now-pay-later is helping them improve their credit. They’re wrong.”,,,,MarketWatch
+deHaan_CV_25-26.pdf,recognition,2024,"Press mention: “Buy Now, Pay Later has exploded in popularity. NY wants to regulate it.”",,,,Gothamist
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “Americans May Be Taking On Too Much Pay-Later ‘Phantom Debt’”,,,,The New York Times
+deHaan_CV_25-26.pdf,recognition,2023,"Press mention: “Breaking down buy now, pay later.”",,,,Retail Dive
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “Why Is Palo Alto Networks Reporting After-the-Bell on a Summer Friday?”,,,,Investing.com
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “The Cost Of Hiding Negative News.”,,,,Mondaq
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “Will BNPL pass the test?”,,,,Payments Dive
+deHaan_CV_25-26.pdf,recognition,2023,"Press mention: “Ernst & Young, after its failed split, could find itself vulnerable to staff poaching.”",,,,The Wall Street Journal
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “BNPL remains mainly absent from consumer credit histories.”,,,,Payments Dive
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “U.S. Regulators to Scrutinize Payment Methods.”,,,,NACS
+deHaan_CV_25-26.pdf,recognition,2023,Press mention: “What payments can expect from Washington this year.”,,,,Payments Dive
+deHaan_CV_25-26.pdf,recognition,2022,Press mention: “New MBA Courses At The Top U.S. B-Schools.”,,,,Yahoo News
+deHaan_CV_25-26.pdf,recognition,2022,"Press mention: “Initial seven Foster Purpose Grants seed projects advancing leadership, insight, progress”",,,,Foster Business Magazine
+deHaan_CV_25-26.pdf,recognition,2021,Press mention: “The unspeakable limits of disclosure”,,,,Compliance Watch
+deHaan_CV_25-26.pdf,recognition,2020,Press mention: “The Delicate Dance of Timing Earnings Releases”,,,,Lexology
+deHaan_CV_25-26.pdf,recognition,2020,Press mention: “Notes on (How Not to Have) a Scandal”,,,,Forward Magazine
+deHaan_CV_25-26.pdf,recognition,2019,Press mention: “Choosing the Right Earnings Day is a Complex Task for Finance Executives”,,,,The Wall Street Journal
+deHaan_CV_25-26.pdf,recognition,2019,Press mention: “Activists provide sugar hit”,,,,Investors Chronicle
+deHaan_CV_25-26.pdf,recognition,2019,Press mention: “Investing Lessons From the Activist Playbook”,,,,Barron's
+deHaan_CV_25-26.pdf,recognition,2018,Press mention: “President Trump Wants to Get Rid of Quarterly Earnings Reports”,,,,Journal Times
+deHaan_CV_25-26.pdf,recognition,2018,"Press mention: “Tesla, Papa John’s Gaffes Boost Odds of Accounting Miscues”",,,,Bloomberg
+deHaan_CV_25-26.pdf,recognition,2018,"Press mention: “ASX Lessons, SGX’s Tech Ambitions”",,,,Medium
+deHaan_CV_25-26.pdf,recognition,2018,Press mention: “Some good news for comScore? Here’s the latest.”,,,,Washington Business Journal
+deHaan_CV_25-26.pdf,recognition,2018,Press mention: “Automated articles on corporate earnings strengthen capital markets.”,,,,Foster Business
+deHaan_CV_25-26.pdf,recognition,2018,Press mention: “ComScore hires Goldman Sachs to explore a sale — but it's likely to be at a discount.”,,,,Washington Business Journal
+deHaan_CV_25-26.pdf,recognition,2017,Press mention: “How robo-journalism is redefining results reporting.”,,,,IR Magazine
+deHaan_CV_25-26.pdf,recognition,2017,Press mention: “Embattled comScore is running out of options”,,,,Washington Business Journal
+deHaan_CV_25-26.pdf,recognition,2017,Press mention: “Should we stop the ‘revolving door’?”,,,,Chicago Booth Review
+deHaan_CV_25-26.pdf,recognition,2017,Press mention: “Chaos at Uber reverberates in industry known for ‘frat-boy’ culture”,,,,The Christian Science Monitor
+deHaan_CV_25-26.pdf,recognition,2016,"Press mention: “Vol. 28, No. 12: A Nurse Doctor.”",,,,The Wall Street Journal
+deHaan_CV_25-26.pdf,recognition,2016,"Press mention: “As Welspun stares into the abyss, can it reinvent itself?”",,,,Mint
+deHaan_CV_25-26.pdf,recognition,2016,Press mention: “Is it time to get rid of quarterly earnings reports?”,,,,NPR Marketplace
+deHaan_CV_25-26.pdf,recognition,2016,Press mention: “Scandals do not always sink a company’s stock.”,,,,USA Today
+deHaan_CV_25-26.pdf,recognition,2016,Press mention: “Coping with a scandal.”,,,,Treasury Today
+deHaan_CV_25-26.pdf,recognition,2015,Press mention: “SEC's Republicans tried to block $52M in corporate penalties last month.”,,,,Politico
+deHaan_CV_25-26.pdf,recognition,2015,Press mention: “SEC rule proposal prompts rush to alter clawback policies.”,,,,Financial Times
+deHaan_CV_25-26.pdf,recognition,2015,Press mention: “Betting on biotech: Activists want SEC to regulate volatile market.”,,,,Aljazeera
+deHaan_CV_25-26.pdf,recognition,2015,Press mention: “How bad weather could affect stock prices.”,,,,The Wall Street Journal
+deHaan_CV_25-26.pdf,recognition,2014,Press mention: “GSK picks good day to announce Chinese bribery fine.”,,,,Financial Times
